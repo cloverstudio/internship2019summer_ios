@@ -20,9 +20,10 @@ class Registration: UIViewController {
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var registrationButton: UIButton!
-    
+    @IBOutlet weak var passIcon: UIButton!
     
     @IBAction func registrationButtonTapped(_ sender: Any) {
+        
     }
     
     override func viewDidLoad() {
@@ -32,6 +33,17 @@ class Registration: UIViewController {
         emailField.setBottomBorder()
         passField.setBottomBorder()
         registrationButton.setUpButton()
+    }
+    
+    @IBAction func passIconTapped(_ sender: UIButton) {
+        
+        sender.isSelected = !sender.isSelected
+        
+        if sender.isSelected {
+            passField.isSecureTextEntry = false
+        } else {
+            passField.isSecureTextEntry = true
+        }
     }
 }
 

@@ -27,13 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        })
         print(Realm.Configuration.defaultConfiguration.fileURL)
         
-        let data = News()
-        data.title = "Ivan"
+
         let rel = RealmManager()
         
         do {
             let realm = try Realm()
-            rel.saveObjects(objs: data)
         } catch {
             print("Error initialising new realm, \(error)")
         }
