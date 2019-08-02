@@ -9,7 +9,9 @@
 import UIKit
 
 class FirstLogin: UIViewController {
-
+    
+    let defaults = UserDefaults.standard
+    
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var descriptionView: UITextView!
     @IBOutlet weak var oibButton: UIButton!
@@ -18,7 +20,6 @@ class FirstLogin: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        goToNextButton.setUpButton()
     }
     
     @IBAction func goToRegButton(_ sender: Any) {

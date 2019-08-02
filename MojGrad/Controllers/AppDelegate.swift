@@ -18,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        if UserDefaults.standard.bool(forKey: Keys.userRegistered) {
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+            self.window?.rootViewController = vc
+        }
+       
 //        Realm.Configuration.defaultConfiguration = Realm.Configuration(
 //            schemaVersion: 1,
 //            migrationBlock: { migration, oldSchemaVersion in
@@ -25,16 +31,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                    //write the migration logic here
 //                }
 //        })
-        print(Realm.Configuration.defaultConfiguration.fileURL)
         
-
-        let rel = RealmManager()
-        
-        do {
-            let realm = try Realm()
-        } catch {
-            print("Error initialising new realm, \(error)")
-        }
+//        print(Realm.Configuration.defaultConfiguration.fileURL)
+//
+//
+//        let rel = RealmManager()
+//
+//        do {
+//            let realm = try Realm()
+//        } catch {
+//            print("Error initialising new realm, \(error)")
+//        }
         
         
         

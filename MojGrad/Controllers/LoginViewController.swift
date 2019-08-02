@@ -8,7 +8,25 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController {
+    
+    var emailFieldCheck = false { didSet {
+        allOK = emailFieldCheck && passFieldCheck
+        }
+    }
+    var passFieldCheck = false { didSet {
+        allOK = emailFieldCheck && passFieldCheck
+        }
+    }
+    
+    var allOK = false { didSet {
+        loginButton.isEnabled = allOK
+        if loginButton.isEnabled {
+            loginButton.alpha = 1
+        }
+        }
+    }
+
 
     var isOn = false
     let defaults = UserDefaults.standard
@@ -19,11 +37,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var contextLabel: UITextView!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
+    
+    //Fields for user to log in
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
     @IBOutlet weak var loginButton: UIButton!
+    
+    //Button to Registration
     @IBOutlet weak var registrationButton: UIButton!
+    
+    //Button to show/hide password
     @IBOutlet weak var passIsNotSee: UIButton!
+    
+    //Labels for validation
+    @IBOutlet weak var validEmailLabel: UILabel!
+    @IBOutlet weak var validPassLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -31,15 +60,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         emailField.setBottomBorder()
         passwordField.setBottomBorder()
-        loginButton.setUpButton()
+        
         passwordField.isSecureTextEntry = true
         loginButton.isEnabled = false
-        passwordField.delegate = self
         
+        validEmailLabel.isHidden = true
+        validPassLabel.isHidden = true
         
-        defaults.set("avion123", forKey: "passs")
-        pass = defaults.string(forKey: "passs") ?? ""
-        print(pass)
+        emailField.addTarget(self, action: #selector(checkEmail), for: .editingChanged)
+        passwordField.addTarget(self, action: #selector(checkPass), for: .editingChanged)
+
+        checkForData()
     }
     
     @IBAction func passButtonTapped(_ sender: UIButton) {
@@ -53,24 +84,52 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
        
     }
-
-    @IBAction func logInButtonTapped(_ sender:
-        UIButton) {
-        
+    
+    @IBAction func logInButtonTapped(_ sender: UIButton) {
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if ((textField.text ?? "") + string == pass) {
+    func isValidEmail(emailID:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: emailID)
+    }
+    
+    @objc
+    func checkEmail(){
+        guard let email = emailField.text, emailField.text?.count != 0 else {return}
+        if isValidEmail(emailID: email) == false {
+            validEmailLabel.isHidden = false
+            validEmailLabel.text = "Email nije validan"
+        } else {
+            validEmailLabel.isHidden = true
+            emailFieldCheck = true
+        }
+    }
+    
+    @objc
+    func checkPass() {
+        if passwordField.text!.count < 6 {
+            validPassLabel.isHidden = false
+            validPassLabel.text = "Pass je prekratak!"
+        } else {
+            validPassLabel.isHidden = true
+            passFieldCheck = true
+        }
+    }
+    
+    func checkForData()  {
+        let email = defaults.string(forKey: Keys.userEmail) ?? ""
+        emailField.text = email
+        
+        let password = defaults.string(forKey: Keys.userPass) ?? ""
+        passwordField.text = password
+        
+        if passwordField.text != "" && emailField.text != "" {
             loginButton.isEnabled = true
             loginButton.alpha = 1
-            print("Right pass")
-        } else {
-            loginButton.isEnabled = false
-            loginButton.alpha = 0.5
-            print("Wrong pass")
         }
-        return true
     }
     
-
+    
 }
+

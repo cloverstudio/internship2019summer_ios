@@ -17,12 +17,10 @@ class News: Object {
     @objc dynamic var image = ""
     
     override static func primaryKey() -> String? {
-        
         return "id"
     }
     
     convenience init(id: Int, context: String, title: String, image: String) {
-        
         self.init()
         self.id = id
         self.context = context
