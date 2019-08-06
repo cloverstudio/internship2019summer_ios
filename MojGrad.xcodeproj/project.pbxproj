@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		09755D7A22F2C2F000D90957 /* SetBottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09755D7922F2C2F000D90957 /* SetBottomBorder.swift */; };
 		09755D7C22F3375500D90957 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09755D7B22F3375500D90957 /* Keys.swift */; };
+		09B9BA6722F9DC9B004FFA1F /* UserNewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6622F9DC9B004FFA1F /* UserNewsFeed.storyboard */; };
+		09B9BA6922F9DDD5004FFA1F /* Zahtjevi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6822F9DDD5004FFA1F /* Zahtjevi.storyboard */; };
+		09B9BA6B22F9DEC3004FFA1F /* Profil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6A22F9DEC3004FFA1F /* Profil.storyboard */; };
+		09B9BA6E22F9E0C0004FFA1F /* Vijesti.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6D22F9E0C0004FFA1F /* Vijesti.storyboard */; };
+		09B9BA7022F9E13C004FFA1F /* ZahtjeviAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6F22F9E13C004FFA1F /* ZahtjeviAdmin.storyboard */; };
+		09B9BA7222F9E1A5004FFA1F /* Korisnici.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA7122F9E1A5004FFA1F /* Korisnici.storyboard */; };
+		09B9BA7422F9E204004FFA1F /* ProfilAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA7322F9E204004FFA1F /* ProfilAdmin.storyboard */; };
 		09C8092122F01CB30003674B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092022F01CB30003674B /* LoginViewController.swift */; };
 		09C8092522F039CE0003674B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092422F039CE0003674B /* News.swift */; };
 		09C8092722F03BE20003674B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092622F03BE20003674B /* RealmManager.swift */; };
@@ -25,6 +32,13 @@
 /* Begin PBXFileReference section */
 		09755D7922F2C2F000D90957 /* SetBottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBottomBorder.swift; sourceTree = "<group>"; };
 		09755D7B22F3375500D90957 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		09B9BA6622F9DC9B004FFA1F /* UserNewsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserNewsFeed.storyboard; sourceTree = "<group>"; };
+		09B9BA6822F9DDD5004FFA1F /* Zahtjevi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Zahtjevi.storyboard; sourceTree = "<group>"; };
+		09B9BA6A22F9DEC3004FFA1F /* Profil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profil.storyboard; sourceTree = "<group>"; };
+		09B9BA6D22F9E0C0004FFA1F /* Vijesti.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vijesti.storyboard; sourceTree = "<group>"; };
+		09B9BA6F22F9E13C004FFA1F /* ZahtjeviAdmin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ZahtjeviAdmin.storyboard; sourceTree = "<group>"; };
+		09B9BA7122F9E1A5004FFA1F /* Korisnici.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Korisnici.storyboard; sourceTree = "<group>"; };
+		09B9BA7322F9E204004FFA1F /* ProfilAdmin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilAdmin.storyboard; sourceTree = "<group>"; };
 		09C8092022F01CB30003674B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		09C8092422F039CE0003674B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		09C8092622F03BE20003674B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
@@ -54,9 +68,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09B9BA6322F9DAAB004FFA1F /* KorisnikStoryboards */ = {
+			isa = PBXGroup;
+			children = (
+				09B9BA6622F9DC9B004FFA1F /* UserNewsFeed.storyboard */,
+				09B9BA6822F9DDD5004FFA1F /* Zahtjevi.storyboard */,
+				09B9BA6A22F9DEC3004FFA1F /* Profil.storyboard */,
+			);
+			path = KorisnikStoryboards;
+			sourceTree = "<group>";
+		};
+		09B9BA6C22F9E080004FFA1F /* AdminStoryboards */ = {
+			isa = PBXGroup;
+			children = (
+				09B9BA6D22F9E0C0004FFA1F /* Vijesti.storyboard */,
+				09B9BA6F22F9E13C004FFA1F /* ZahtjeviAdmin.storyboard */,
+				09B9BA7122F9E1A5004FFA1F /* Korisnici.storyboard */,
+				09B9BA7322F9E204004FFA1F /* ProfilAdmin.storyboard */,
+			);
+			path = AdminStoryboards;
+			sourceTree = "<group>";
+		};
 		09C8092222F021850003674B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				09B9BA6322F9DAAB004FFA1F /* KorisnikStoryboards */,
+				09B9BA6C22F9E080004FFA1F /* AdminStoryboards */,
 				09E78E8322EECD9B005F5390 /* Main.storyboard */,
 				09E78E8822EECD9B005F5390 /* LaunchScreen.storyboard */,
 				09E78E9722EF017D005F5390 /* SetUpGradient.swift */,
@@ -210,7 +247,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E78E8A22EECD9B005F5390 /* LaunchScreen.storyboard in Resources */,
+				09B9BA6E22F9E0C0004FFA1F /* Vijesti.storyboard in Resources */,
+				09B9BA6922F9DDD5004FFA1F /* Zahtjevi.storyboard in Resources */,
+				09B9BA7222F9E1A5004FFA1F /* Korisnici.storyboard in Resources */,
+				09B9BA6B22F9DEC3004FFA1F /* Profil.storyboard in Resources */,
 				09E78E8722EECD9B005F5390 /* Assets.xcassets in Resources */,
+				09B9BA7422F9E204004FFA1F /* ProfilAdmin.storyboard in Resources */,
+				09B9BA7022F9E13C004FFA1F /* ZahtjeviAdmin.storyboard in Resources */,
+				09B9BA6722F9DC9B004FFA1F /* UserNewsFeed.storyboard in Resources */,
 				09E78E8522EECD9B005F5390 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

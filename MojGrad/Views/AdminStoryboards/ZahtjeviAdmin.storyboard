@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4nM-hy-NGb">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="uIJ-Hz-6cP">
+            <objects>
+                <viewController id="JMJ-zA-Gbb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rUn-YG-983">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="10w-Y5-OQ4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GEw-x6-5tu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xU6-y1-xTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657" y="550"/>
+        </scene>
+        <!--Zahtjevi-->
+        <scene sceneID="8Zk-U1-Bqn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4nM-hy-NGb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Zahtjevi" image="nav_requests_icon" selectedImage="nav_requests_selected_icon" id="HAK-8Z-2p9"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oZB-0h-nDP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JMJ-zA-Gbb" kind="relationship" relationship="rootViewController" id="KYh-Pm-agH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7W1-9z-DS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="721.73913043478262" y="550.44642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nav_requests_icon" width="33" height="30"/>
+        <image name="nav_requests_selected_icon" width="33" height="30"/>
+    </resources>
+</document>
