@@ -9,6 +9,6 @@ target 'MojGrad' do
 pod 'SwiftyJSON'
 pod 'Alamofire'
 pod 'RealmSwift'
-
+pod 'SVProgressHUD'
 
 end
