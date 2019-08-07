@@ -26,6 +26,10 @@ class LoginViewController: UIViewController {
         }
         }
     }
+    
+    // Images for remember me button
+    let checkedImage = UIImage(named: "checkbox-blue-checked")! as UIImage
+    let uncheckedImage = UIImage(named: "checkbox-blue-unchecked")! as UIImage
 
 
     var isOn = false
@@ -42,6 +46,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var rememberMeButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
     //Button to Registration
@@ -84,6 +89,20 @@ class LoginViewController: UIViewController {
         }
        
     }
+    
+    
+    
+    @IBAction func rememberMeButtonTapped(_ sender: UIButton) {
+        
+        sender.isSelected = !sender.isSelected
+        
+        if sender.isSelected {
+            sender.setImage(checkedImage, for: UIControl.State.normal)
+        } else {
+            sender.setImage(uncheckedImage, for: UIControl.State.normal)
+        }
+    }
+    
     
     @IBAction func logInButtonTapped(_ sender: UIButton) {
     }

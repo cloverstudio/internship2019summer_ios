@@ -13,4 +13,5 @@ struct Keys {
     static let userPass = "userPass"
     static let userRegistered = "userRegistered"
     static let userOib = "userOib"
+    static let rememberMe = "rememberMe"
 }

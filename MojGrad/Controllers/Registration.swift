@@ -32,6 +32,10 @@ class Registration: UIViewController {
         }
         }
     }
+    
+    // Images for remember me button
+    let checkedImage = UIImage(named: "checkbox-blue-checked")! as UIImage
+    let uncheckedImage = UIImage(named: "checkbox-blue-unchecked")! as UIImage
 
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var infoLabel: UILabel!
@@ -44,6 +48,8 @@ class Registration: UIViewController {
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     
+    
+    @IBOutlet weak var rememberMeButton: UIButton!
     @IBOutlet weak var registrationButton: UIButton!
     @IBOutlet weak var passIcon: UIButton!
     //Labels for validation
@@ -85,6 +91,16 @@ class Registration: UIViewController {
             passField.isSecureTextEntry = false
         } else {
             passField.isSecureTextEntry = true
+        }
+    }
+    @IBAction func rememberMeButtonTapped(_ sender: UIButton) {
+        
+        sender.isSelected = !sender.isSelected
+        
+        if sender.isSelected {
+            sender.setImage(checkedImage, for: UIControl.State.normal)
+        } else {
+            sender.setImage(uncheckedImage, for: UIControl.State.normal)
         }
     }
     
@@ -146,5 +162,6 @@ class Registration: UIViewController {
 
         let pass = defaults.value(forKey: Keys.userPass) as? String ?? ""
         passField.text = pass
+        
     }
 }
