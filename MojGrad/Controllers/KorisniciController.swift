@@ -11,6 +11,8 @@ import UIKit
 class KorisniciController: UIViewController {
 
     var korisnici = [Korisnici]()
+    var searchUser = [Korisnici]()
+    var searching = false
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -24,7 +26,9 @@ class KorisniciController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        searchBar.delegate = self as? UISearchBarDelegate
+        searchBar.delegate = self
+        
+        
     }
     
     func createUsers() -> [Korisnici] {
@@ -50,16 +54,32 @@ class KorisniciController: UIViewController {
 
 extension KorisniciController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return korisnici.count
+        if searching {
+            return searchUser.count
+        } else {
+            return korisnici.count
+        }
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let korisnik = korisnici[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "korisnikCell") as! KorisnikCell
         
-        cell.korisnikImage.image = korisnik.korisnikImage
-        cell.imeKorisnika.text = korisnik.korisnikIme
-        cell.emailKorisnika.text = korisnik.korisnikEmail
-        
+        if searching {
+            cell.imeKorisnika.text = searchUser[indexPath.row].korisnikIme
+        } else {
+            cell.korisnikImage.image = korisnik.korisnikImage
+            cell.imeKorisnika.text = korisnik.korisnikIme
+            cell.emailKorisnika.text = korisnik.korisnikEmail
+        }
         return cell
+    }
+}
+
+extension KorisniciController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchUser = korisnici.filter({$0.korisnikIme.prefix(searchText.count) == searchText})
+        searching = true
+        tableView.reloadData()
     }
 }
