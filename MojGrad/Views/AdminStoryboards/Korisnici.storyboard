@@ -10,26 +10,115 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Korisnici Controller-->
         <scene sceneID="mGR-fi-v6h">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MsR-ye-IQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="RHH-7J-qBk" sceneMemberID="viewController">
+                <viewController id="RHH-7J-qBk" customClass="KorisniciController" customModule="MojGrad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Zd-yO-vQz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJf-td-X0L">
+                                <rect key="frame" x="348" y="108" width="46" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2Mm-un-CGC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ksj-bs-2u6">
+                                <rect key="frame" x="0.0" y="178" width="414" height="635"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="korisnikCell" rowHeight="80" id="3LO-An-uIy" customClass="KorisnikCell" customModule="MojGrad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3LO-An-uIy" id="FzK-Zb-nZx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="his-Ka-8Hj">
+                                                    <rect key="frame" x="20" y="10.5" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="4OU-qF-nwL"/>
+                                                        <constraint firstAttribute="width" constant="60" id="uEl-CN-4Vm"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogc-9i-tqs">
+                                                    <rect key="frame" x="100" y="10.5" width="255" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="2KC-38-oVY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQT-gG-jan">
+                                                    <rect key="frame" x="100" y="49" width="255" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="FW2-Q2-e8A"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="UQT-gG-jan" secondAttribute="trailing" constant="20" id="A8R-Mi-JFI"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ogc-9i-tqs" secondAttribute="trailing" constant="20" id="CAX-PE-5uT"/>
+                                                <constraint firstItem="his-Ka-8Hj" firstAttribute="leading" secondItem="FzK-Zb-nZx" secondAttribute="leading" constant="20" id="Faf-kO-2iW"/>
+                                                <constraint firstItem="his-Ka-8Hj" firstAttribute="centerY" secondItem="FzK-Zb-nZx" secondAttribute="centerY" id="Kth-LJ-1Z8"/>
+                                                <constraint firstItem="Ogc-9i-tqs" firstAttribute="leading" secondItem="his-Ka-8Hj" secondAttribute="trailing" constant="20" id="WAE-e9-qZx"/>
+                                                <constraint firstItem="UQT-gG-jan" firstAttribute="leading" secondItem="his-Ka-8Hj" secondAttribute="trailing" constant="20" id="caD-YF-0a4"/>
+                                                <constraint firstItem="his-Ka-8Hj" firstAttribute="top" secondItem="FzK-Zb-nZx" secondAttribute="top" constant="10" id="hGr-v5-Sxw"/>
+                                                <constraint firstItem="Ogc-9i-tqs" firstAttribute="top" secondItem="FzK-Zb-nZx" secondAttribute="top" constant="10" id="m2U-Ml-uxk"/>
+                                                <constraint firstItem="UQT-gG-jan" firstAttribute="top" secondItem="Ogc-9i-tqs" secondAttribute="bottom" constant="8.5" id="yEj-yO-9xD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emailKorisnika" destination="UQT-gG-jan" id="Ffr-uY-Q6V"/>
+                                            <outlet property="imeKorisnika" destination="Ogc-9i-tqs" id="cpg-KX-lK3"/>
+                                            <outlet property="korisnikImage" destination="his-Ka-8Hj" id="D1b-5r-Waq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="zFV-jJ-NL0">
+                                <rect key="frame" x="20" y="108" width="313" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8KK-IL-5az"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fce-fb-fl2" firstAttribute="bottom" secondItem="ksj-bs-2u6" secondAttribute="bottom" id="K9b-qd-3LY"/>
+                            <constraint firstItem="KJf-td-X0L" firstAttribute="top" secondItem="fce-fb-fl2" secondAttribute="top" constant="20" id="Qdp-Ym-k1n"/>
+                            <constraint firstItem="ksj-bs-2u6" firstAttribute="top" secondItem="zFV-jJ-NL0" secondAttribute="bottom" constant="20" id="WU3-2o-4zw"/>
+                            <constraint firstItem="zFV-jJ-NL0" firstAttribute="leading" secondItem="fce-fb-fl2" secondAttribute="leading" constant="20" id="X3p-gf-efs"/>
+                            <constraint firstItem="KJf-td-X0L" firstAttribute="leading" secondItem="zFV-jJ-NL0" secondAttribute="trailing" constant="15" id="fep-1R-Vng"/>
+                            <constraint firstItem="ksj-bs-2u6" firstAttribute="leading" secondItem="fce-fb-fl2" secondAttribute="leading" id="qQS-kM-Dfh"/>
+                            <constraint firstItem="fce-fb-fl2" firstAttribute="trailing" secondItem="KJf-td-X0L" secondAttribute="trailing" constant="20" id="qXo-n9-Y2j"/>
+                            <constraint firstItem="ksj-bs-2u6" firstAttribute="top" secondItem="KJf-td-X0L" secondAttribute="bottom" constant="20" id="rOR-4X-bqR"/>
+                            <constraint firstItem="fce-fb-fl2" firstAttribute="trailing" secondItem="ksj-bs-2u6" secondAttribute="trailing" id="vZ3-8m-U2x"/>
+                            <constraint firstItem="zFV-jJ-NL0" firstAttribute="top" secondItem="fce-fb-fl2" secondAttribute="top" constant="20" id="yG0-QE-Gcu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fce-fb-fl2"/>
                     </view>
                     <navigationItem key="navigationItem" id="vFd-LX-ZEe"/>
+                    <connections>
+                        <outlet property="searchBar" destination="zFV-jJ-NL0" id="2cW-e2-4l4"/>
+                        <outlet property="tableView" destination="ksj-bs-2u6" id="deZ-du-5Nd"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MsR-ye-IQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="nTZ-Ic-ehZ"/>
             </objects>
-            <point key="canvasLocation" x="2584" y="550"/>
+            <point key="canvasLocation" x="2582.608695652174" y="549.77678571428567"/>
         </scene>
         <!--Korisnici-->
         <scene sceneID="nWY-Jq-nEZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rLI-T1-Fhb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UIB-Lj-awq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Korisnici" image="nav_users_icon" selectedImage="nav_users_selected_icon" id="gTM-RD-MEl"/>
                     <toolbarItems/>
@@ -43,6 +132,7 @@
                         <segue destination="RHH-7J-qBk" kind="relationship" relationship="rootViewController" id="wz9-aX-8XH"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rLI-T1-Fhb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1673.913043478261" y="549.77678571428567"/>
         </scene>

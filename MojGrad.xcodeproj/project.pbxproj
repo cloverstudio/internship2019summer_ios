@@ -16,6 +16,9 @@
 		09B9BA7022F9E13C004FFA1F /* ZahtjeviAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6F22F9E13C004FFA1F /* ZahtjeviAdmin.storyboard */; };
 		09B9BA7222F9E1A5004FFA1F /* Korisnici.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA7122F9E1A5004FFA1F /* Korisnici.storyboard */; };
 		09B9BA7422F9E204004FFA1F /* ProfilAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA7322F9E204004FFA1F /* ProfilAdmin.storyboard */; };
+		09B9BA8022FB44FE004FFA1F /* KorisniciController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9BA7F22FB44FE004FFA1F /* KorisniciController.swift */; };
+		09B9BA8222FB45F2004FFA1F /* KorisnikCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9BA8122FB45F2004FFA1F /* KorisnikCell.swift */; };
+		09B9BA8422FB4C03004FFA1F /* Korisnici.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9BA8322FB4C03004FFA1F /* Korisnici.swift */; };
 		09C8092122F01CB30003674B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092022F01CB30003674B /* LoginViewController.swift */; };
 		09C8092522F039CE0003674B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092422F039CE0003674B /* News.swift */; };
 		09C8092722F03BE20003674B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092622F03BE20003674B /* RealmManager.swift */; };
@@ -39,6 +42,9 @@
 		09B9BA6F22F9E13C004FFA1F /* ZahtjeviAdmin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ZahtjeviAdmin.storyboard; sourceTree = "<group>"; };
 		09B9BA7122F9E1A5004FFA1F /* Korisnici.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Korisnici.storyboard; sourceTree = "<group>"; };
 		09B9BA7322F9E204004FFA1F /* ProfilAdmin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilAdmin.storyboard; sourceTree = "<group>"; };
+		09B9BA7F22FB44FE004FFA1F /* KorisniciController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KorisniciController.swift; sourceTree = "<group>"; };
+		09B9BA8122FB45F2004FFA1F /* KorisnikCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KorisnikCell.swift; sourceTree = "<group>"; };
+		09B9BA8322FB4C03004FFA1F /* Korisnici.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Korisnici.swift; sourceTree = "<group>"; };
 		09C8092022F01CB30003674B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		09C8092422F039CE0003674B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		09C8092622F03BE20003674B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				09755D7B22F3375500D90957 /* Keys.swift */,
+				09B9BA8322FB4C03004FFA1F /* Korisnici.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +172,8 @@
 				09E78E8122EECD9B005F5390 /* FirstLogin.swift */,
 				09C8092022F01CB30003674B /* LoginViewController.swift */,
 				09E78E9522EEE793005F5390 /* Registration.swift */,
+				09B9BA7F22FB44FE004FFA1F /* KorisniciController.swift */,
+				09B9BA8122FB45F2004FFA1F /* KorisnikCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -309,6 +318,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				09C8092522F039CE0003674B /* News.swift in Sources */,
+				09B9BA8422FB4C03004FFA1F /* Korisnici.swift in Sources */,
+				09B9BA8022FB44FE004FFA1F /* KorisniciController.swift in Sources */,
 				09E78E9622EEE793005F5390 /* Registration.swift in Sources */,
 				09E78E9822EF017D005F5390 /* SetUpGradient.swift in Sources */,
 				09E78E8222EECD9B005F5390 /* FirstLogin.swift in Sources */,
@@ -317,6 +328,7 @@
 				09E78E8022EECD9B005F5390 /* AppDelegate.swift in Sources */,
 				09755D7C22F3375500D90957 /* Keys.swift in Sources */,
 				09755D7A22F2C2F000D90957 /* SetBottomBorder.swift in Sources */,
+				09B9BA8222FB45F2004FFA1F /* KorisnikCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
