@@ -27,8 +27,12 @@ class Registration: UIViewController {
     
     var allOK = false { didSet {
         registrationButton.isEnabled = allOK
-        if registrationButton.isEnabled {
+        rememberMeButton.isEnabled = allOK
+        if registrationButton.isEnabled && rememberMeButton.isEnabled {
             registrationButton.alpha = 1
+            rememberMeButton.alpha = 1
+            checkmarkImage.alpha = 1
+            rememberMeLabel.alpha = 1
         }
         }
     }
@@ -48,8 +52,11 @@ class Registration: UIViewController {
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     
-    
+    //Checkmark image and remember label are under remember me button
     @IBOutlet weak var rememberMeButton: UIButton!
+    @IBOutlet weak var checkmarkImage: UIImageView!
+    @IBOutlet weak var rememberMeLabel: UILabel!
+    
     @IBOutlet weak var registrationButton: UIButton!
     @IBOutlet weak var passIcon: UIButton!
     //Labels for validation
@@ -71,6 +78,7 @@ class Registration: UIViewController {
         
         passField.isSecureTextEntry = true
         registrationButton.isEnabled = false
+        rememberMeButton.isEnabled = false
         
         oibField.addTarget(self, action: #selector(checkOib), for: .editingChanged)
         emailField.addTarget(self, action: #selector(checkEmail), for: .editingChanged)
@@ -94,15 +102,16 @@ class Registration: UIViewController {
         }
     }
     @IBAction func rememberMeButtonTapped(_ sender: UIButton) {
-        
         sender.isSelected = !sender.isSelected
-        
         if sender.isSelected {
-            sender.setImage(checkedImage, for: UIControl.State.normal)
+            rememberMeLabel.text = "Zaboravi me"
+            checkmarkImage.image = UIImage(named: "remember_me_x_icon")
         } else {
-            sender.setImage(uncheckedImage, for: UIControl.State.normal)
+            rememberMeLabel.text = "Zapamti me"
+            checkmarkImage.image = UIImage(named: "remember_me_checkmark_icon")
         }
     }
+    
     
     func isValidEmail(emailID:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"

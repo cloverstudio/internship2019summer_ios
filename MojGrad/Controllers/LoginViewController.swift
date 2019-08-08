@@ -46,7 +46,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    
     @IBOutlet weak var rememberMeButton: UIButton!
+    //Checkmark Image and remember me label are under remember me button
+    @IBOutlet weak var checkmarkImage: UIImageView!
+    @IBOutlet weak var rememberMeLabel: UILabel!
+    
     @IBOutlet weak var loginButton: UIButton!
     
     //Button to Registration
@@ -68,6 +73,7 @@ class LoginViewController: UIViewController {
         
         passwordField.isSecureTextEntry = true
         loginButton.isEnabled = false
+        rememberMeButton.isEnabled = false
         
         validEmailLabel.isHidden = true
         validPassLabel.isHidden = true
@@ -90,16 +96,14 @@ class LoginViewController: UIViewController {
        
     }
     
-    
-    
     @IBAction func rememberMeButtonTapped(_ sender: UIButton) {
-        
         sender.isSelected = !sender.isSelected
-        
         if sender.isSelected {
-            sender.setImage(checkedImage, for: UIControl.State.normal)
+            rememberMeLabel.text = "Zaboravi me"
+            checkmarkImage.image = UIImage(named: "remember_me_x_icon")
         } else {
-            sender.setImage(uncheckedImage, for: UIControl.State.normal)
+            rememberMeLabel.text = "Zapamti me"
+            checkmarkImage.image = UIImage(named: "remember_me_checkmark_icon")
         }
     }
     
@@ -146,6 +150,10 @@ class LoginViewController: UIViewController {
         if passwordField.text != "" && emailField.text != "" {
             loginButton.isEnabled = true
             loginButton.alpha = 1
+            rememberMeButton.isEnabled = true
+            rememberMeButton.alpha = 1
+            checkmarkImage.alpha = 1
+            rememberMeLabel.alpha = 1
         }
     }
     
