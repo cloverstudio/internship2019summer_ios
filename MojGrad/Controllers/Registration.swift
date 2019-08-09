@@ -13,21 +13,21 @@ class Registration: UIViewController {
     let defaults = UserDefaults.standard
     
     var oibFieldCheck = false { didSet {
-        allOK = oibFieldCheck && emailFieldCheck && passFieldCheck
+        correctInputs = oibFieldCheck && emailFieldCheck && passFieldCheck
         }
     }
     var emailFieldCheck = false { didSet {
-        allOK = oibFieldCheck && emailFieldCheck && passFieldCheck
+        correctInputs = oibFieldCheck && emailFieldCheck && passFieldCheck
         }
     }
     var passFieldCheck = false { didSet {
-        allOK = oibFieldCheck && emailFieldCheck && passFieldCheck
+        correctInputs = oibFieldCheck && emailFieldCheck && passFieldCheck
         }
     }
     
-    var allOK = false { didSet {
-        registrationButton.isEnabled = allOK
-        rememberMeButton.isEnabled = allOK
+    var correctInputs = false { didSet {
+        registrationButton.isEnabled = correctInputs
+        rememberMeButton.isEnabled = correctInputs
         if registrationButton.isEnabled && rememberMeButton.isEnabled {
             registrationButton.alpha = 1
             rememberMeButton.alpha = 1
@@ -36,10 +36,6 @@ class Registration: UIViewController {
         }
         }
     }
-    
-    // Images for remember me button
-    let checkedImage = UIImage(named: "checkbox-blue-checked")! as UIImage
-    let uncheckedImage = UIImage(named: "checkbox-blue-unchecked")! as UIImage
 
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var infoLabel: UILabel!
