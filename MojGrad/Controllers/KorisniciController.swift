@@ -14,6 +14,7 @@ class KorisniciController: UIViewController {
     var searchUser = [Korisnici]()
     var searching = false
     
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     

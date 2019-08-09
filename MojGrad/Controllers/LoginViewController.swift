@@ -26,11 +26,6 @@ class LoginViewController: UIViewController {
         }
         }
     }
-    
-    // Images for remember me button
-    let checkedImage = UIImage(named: "checkbox-blue-checked")! as UIImage
-    let uncheckedImage = UIImage(named: "checkbox-blue-unchecked")! as UIImage
-
 
     var isOn = false
     let defaults = UserDefaults.standard

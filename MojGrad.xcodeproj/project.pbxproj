@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0915A42A22FC1DFC002536CF /* NewUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0915A42922FC1DFC002536CF /* NewUserController.swift */; };
 		09755D7A22F2C2F000D90957 /* SetBottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09755D7922F2C2F000D90957 /* SetBottomBorder.swift */; };
 		09755D7C22F3375500D90957 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09755D7B22F3375500D90957 /* Keys.swift */; };
 		09B9BA6722F9DC9B004FFA1F /* UserNewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6622F9DC9B004FFA1F /* UserNewsFeed.storyboard */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0915A42922FC1DFC002536CF /* NewUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserController.swift; sourceTree = "<group>"; };
 		09755D7922F2C2F000D90957 /* SetBottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBottomBorder.swift; sourceTree = "<group>"; };
 		09755D7B22F3375500D90957 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		09B9BA6622F9DC9B004FFA1F /* UserNewsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserNewsFeed.storyboard; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				09E78E9522EEE793005F5390 /* Registration.swift */,
 				09B9BA7F22FB44FE004FFA1F /* KorisniciController.swift */,
 				09B9BA8122FB45F2004FFA1F /* KorisnikCell.swift */,
+				0915A42922FC1DFC002536CF /* NewUserController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				09E78E9822EF017D005F5390 /* SetUpGradient.swift in Sources */,
 				09E78E8222EECD9B005F5390 /* FirstLogin.swift in Sources */,
 				09C8092122F01CB30003674B /* LoginViewController.swift in Sources */,
+				0915A42A22FC1DFC002536CF /* NewUserController.swift in Sources */,
 				09C8092722F03BE20003674B /* RealmManager.swift in Sources */,
 				09E78E8022EECD9B005F5390 /* AppDelegate.swift in Sources */,
 				09755D7C22F3375500D90957 /* Keys.swift in Sources */,
