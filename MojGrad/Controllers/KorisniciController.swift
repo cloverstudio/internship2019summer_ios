@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// TODO: ENGLISH HERE, ALSO MIGHT MAKE THE CLASS final TO MARK IT AS NO LONGER SUBCLASSABLE
 class KorisniciController: UIViewController {
 
     var korisnici = [Korisnici]()

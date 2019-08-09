@@ -7,11 +7,11 @@
 //
 
 import UIKit
-
+// TODO: RegistrationViewController or RegistrationVC TO BE MORE DESCRIPTIVE
 class Registration: UIViewController {
-    
+    // TODO: THIS WOULD BE DONE BETTER AS CALCULATED VARIABLE, UNLESS YOU ARE AIMING FOR DEPENDENCY INJECTION, THEN IT SHOULD BE AN ASIGNABLE VARIABLE e.g. var defaults: UserDefaults!. Then assign to this during view controller inflation, or in viewDidLoad (if not using any DI).
     let defaults = UserDefaults.standard
-    
+    // TODO: didSet IN NEXT ROW
     var oibFieldCheck = false { didSet {
         allOK = oibFieldCheck && emailFieldCheck && passFieldCheck
         }

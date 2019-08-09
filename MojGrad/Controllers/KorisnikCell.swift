@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// TODO: MAYBE ENGLISH? like UserCell
 class KorisnikCell: UITableViewCell {
 
     @IBOutlet weak var korisnikImage: UIImageView!
