@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First Login-->
+        <!--First Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FirstLogin" customModule="MojGrad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FirstLoginViewController" customModule="MojGrad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="-1947.826086956522" y="-298.66071428571428"/>
         </scene>
-        <!--Registration-->
+        <!--Registration View Controller-->
         <scene sceneID="7kS-GZ-RLO">
             <objects>
-                <viewController storyboardIdentifier="login" id="wTG-Te-h0V" customClass="Registration" customModule="MojGrad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="wTG-Te-h0V" customClass="RegistrationViewController" customModule="MojGrad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YpO-YK-P0F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,7 +184,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfl-R7-Qle">
-                                <rect key="frame" x="369" y="656" width="25" height="24"/>
+                                <rect key="frame" x="369" y="656" width="25" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="HCb-pD-paZ"/>
                                 </constraints>
@@ -621,60 +621,60 @@
             </objects>
             <point key="canvasLocation" x="416" y="273"/>
         </scene>
-        <!--Vijesti-->
+        <!--NewsFeed-->
         <scene sceneID="Gr9-x6-vRQ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Vijesti" id="Tkr-u7-idJ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="NewsFeed" id="Tkr-u7-idJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="tUM-bS-ljy"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gL3-Pn-uHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1271" y="-7"/>
         </scene>
-        <!--ZahtjeviAdmin-->
+        <!--AdminRequests-->
         <scene sceneID="FoH-qN-aoI">
             <objects>
-                <viewControllerPlaceholder storyboardName="ZahtjeviAdmin" id="xPI-kM-Tan" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="AdminRequests" id="xPI-kM-Tan" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="NZl-2u-V30"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ax-1M-3Ca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1394" y="149"/>
         </scene>
-        <!--Korisnici-->
+        <!--NewUser-->
         <scene sceneID="XKx-nE-ekH">
             <objects>
-                <viewControllerPlaceholder storyboardName="Korisnici" id="Fe9-Dc-cHO" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="NewUser" id="Fe9-Dc-cHO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="qUH-t5-z6f"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVs-kb-jDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1369" y="353"/>
         </scene>
-        <!--ProfilAdmin-->
+        <!--AdminProfle-->
         <scene sceneID="dTg-hr-2Ql">
             <objects>
-                <viewControllerPlaceholder storyboardName="ProfilAdmin" id="I1C-67-zR5" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="AdminProfle" id="I1C-67-zR5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="cjc-gH-K8b"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gd-O9-DHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1320" y="470"/>
         </scene>
-        <!--Zahtjevi-->
+        <!--Requests-->
         <scene sceneID="8Iq-NJ-KUO">
             <objects>
-                <viewControllerPlaceholder storyboardName="Zahtjevi" id="ysq-WV-iep" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Requests" id="ysq-WV-iep" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="hri-gb-rAX"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQn-hG-LaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1273" y="-467"/>
         </scene>
-        <!--Profil-->
+        <!--Profile-->
         <scene sceneID="8m7-Au-KSf">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profil" id="g9N-XV-3yt" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Profile" id="g9N-XV-3yt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="IM6-fb-rm6"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eI7-Gr-cST" userLabel="First Responder" sceneMemberID="firstResponder"/>

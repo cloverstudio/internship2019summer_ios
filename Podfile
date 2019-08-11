@@ -10,5 +10,6 @@ pod 'SwiftyJSON'
 pod 'Alamofire'
 pod 'RealmSwift'
 pod 'SVProgressHUD'
+pod 'JWTDecode', '~> 2.3'
 
 end

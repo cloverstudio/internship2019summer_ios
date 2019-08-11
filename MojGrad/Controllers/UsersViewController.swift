@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KorisniciController: UIViewController {
+class UsersViewController: UIViewController {
 
     var korisnici = [Korisnici]()
     var searchUser = [Korisnici]()
@@ -53,7 +53,7 @@ class KorisniciController: UIViewController {
 
 }
 
-extension KorisniciController: UITableViewDelegate,UITableViewDataSource {
+extension UsersViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching {
             return searchUser.count
@@ -64,7 +64,7 @@ extension KorisniciController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let korisnik = korisnici[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "korisnikCell") as! KorisnikCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "korisnikCell") as! UserCell
         
         if searching {
             cell.imeKorisnika.text = searchUser[indexPath.row].korisnikIme
@@ -77,7 +77,7 @@ extension KorisniciController: UITableViewDelegate,UITableViewDataSource {
     }
 }
 
-extension KorisniciController: UISearchBarDelegate {
+extension UsersViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchUser = korisnici.filter({$0.korisnikIme.prefix(searchText.count) == searchText})
         searching = true

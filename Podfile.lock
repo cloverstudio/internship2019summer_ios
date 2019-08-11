@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.2)
+  - JWTDecode (2.3.0)
   - Realm (3.17.3):
     - Realm/Headers (= 3.17.3)
   - Realm/Headers (3.17.3)
@@ -10,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - JWTDecode (~> 2.3)
   - RealmSwift
   - SVProgressHUD
   - SwiftyJSON
@@ -17,6 +19,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - JWTDecode
     - Realm
     - RealmSwift
     - SVProgressHUD
@@ -24,11 +27,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  JWTDecode: fb77675c8049c1a7e9433c7cf448c3ce33ee4ac7
   Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
   RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: cb8d1ff02eb81c6db1bd7a88e42f4026d93c4345
+PODFILE CHECKSUM: f465bcd9270b6591b4ff1b4075b2d893dfcc4037
 
 COCOAPODS: 1.7.1

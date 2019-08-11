@@ -8,57 +8,63 @@
 
 /* Begin PBXBuildFile section */
 		0915A42A22FC1DFC002536CF /* NewUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0915A42922FC1DFC002536CF /* NewUserController.swift */; };
-		09755D7A22F2C2F000D90957 /* SetBottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09755D7922F2C2F000D90957 /* SetBottomBorder.swift */; };
+		09747CE722FD84CD00E2CED2 /* SignUpDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09747CE622FD84CD00E2CED2 /* SignUpDataModel.swift */; };
+		09755D7A22F2C2F000D90957 /* UITextField+SetBottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09755D7922F2C2F000D90957 /* UITextField+SetBottomBorder.swift */; };
 		09755D7C22F3375500D90957 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09755D7B22F3375500D90957 /* Keys.swift */; };
+		099D20D722FDC4B500E25894 /* MD5Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099D20D622FDC4B500E25894 /* MD5Coding.swift */; };
+		099D20D922FDD59000E25894 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099D20D822FDD59000E25894 /* RegistrationService.swift */; };
 		09B9BA6722F9DC9B004FFA1F /* UserNewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6622F9DC9B004FFA1F /* UserNewsFeed.storyboard */; };
-		09B9BA6922F9DDD5004FFA1F /* Zahtjevi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6822F9DDD5004FFA1F /* Zahtjevi.storyboard */; };
-		09B9BA6B22F9DEC3004FFA1F /* Profil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6A22F9DEC3004FFA1F /* Profil.storyboard */; };
-		09B9BA6E22F9E0C0004FFA1F /* Vijesti.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6D22F9E0C0004FFA1F /* Vijesti.storyboard */; };
-		09B9BA7022F9E13C004FFA1F /* ZahtjeviAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6F22F9E13C004FFA1F /* ZahtjeviAdmin.storyboard */; };
-		09B9BA7222F9E1A5004FFA1F /* Korisnici.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA7122F9E1A5004FFA1F /* Korisnici.storyboard */; };
-		09B9BA7422F9E204004FFA1F /* ProfilAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA7322F9E204004FFA1F /* ProfilAdmin.storyboard */; };
-		09B9BA8022FB44FE004FFA1F /* KorisniciController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9BA7F22FB44FE004FFA1F /* KorisniciController.swift */; };
-		09B9BA8222FB45F2004FFA1F /* KorisnikCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9BA8122FB45F2004FFA1F /* KorisnikCell.swift */; };
+		09B9BA6922F9DDD5004FFA1F /* Requests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6822F9DDD5004FFA1F /* Requests.storyboard */; };
+		09B9BA6B22F9DEC3004FFA1F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6A22F9DEC3004FFA1F /* Profile.storyboard */; };
+		09B9BA6E22F9E0C0004FFA1F /* NewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6D22F9E0C0004FFA1F /* NewsFeed.storyboard */; };
+		09B9BA7022F9E13C004FFA1F /* AdminRequests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6F22F9E13C004FFA1F /* AdminRequests.storyboard */; };
+		09B9BA7222F9E1A5004FFA1F /* NewUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA7122F9E1A5004FFA1F /* NewUser.storyboard */; };
+		09B9BA7422F9E204004FFA1F /* AdminProfle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA7322F9E204004FFA1F /* AdminProfle.storyboard */; };
+		09B9BA8022FB44FE004FFA1F /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9BA7F22FB44FE004FFA1F /* UsersViewController.swift */; };
+		09B9BA8222FB45F2004FFA1F /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9BA8122FB45F2004FFA1F /* UserCell.swift */; };
 		09B9BA8422FB4C03004FFA1F /* Korisnici.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9BA8322FB4C03004FFA1F /* Korisnici.swift */; };
 		09C8092122F01CB30003674B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092022F01CB30003674B /* LoginViewController.swift */; };
 		09C8092522F039CE0003674B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092422F039CE0003674B /* News.swift */; };
 		09C8092722F03BE20003674B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092622F03BE20003674B /* RealmManager.swift */; };
 		09E78E8022EECD9B005F5390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E7F22EECD9B005F5390 /* AppDelegate.swift */; };
-		09E78E8222EECD9B005F5390 /* FirstLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E8122EECD9B005F5390 /* FirstLogin.swift */; };
+		09E78E8222EECD9B005F5390 /* FirstLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E8122EECD9B005F5390 /* FirstLoginViewController.swift */; };
 		09E78E8522EECD9B005F5390 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E78E8322EECD9B005F5390 /* Main.storyboard */; };
 		09E78E8722EECD9B005F5390 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E78E8622EECD9B005F5390 /* Assets.xcassets */; };
 		09E78E8A22EECD9B005F5390 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E78E8822EECD9B005F5390 /* LaunchScreen.storyboard */; };
-		09E78E9622EEE793005F5390 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E9522EEE793005F5390 /* Registration.swift */; };
-		09E78E9822EF017D005F5390 /* SetUpGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E9722EF017D005F5390 /* SetUpGradient.swift */; };
+		09E78E9622EEE793005F5390 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E9522EEE793005F5390 /* RegistrationViewController.swift */; };
+		09E78E9822EF017D005F5390 /* UIButtonWithGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E9722EF017D005F5390 /* UIButtonWithGradient.swift */; };
 		EDE916605C9887DCFC2FF0F9 /* Pods_MojGrad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFF5B0E76527D2EF3467D3F /* Pods_MojGrad.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0915A42922FC1DFC002536CF /* NewUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserController.swift; sourceTree = "<group>"; };
-		09755D7922F2C2F000D90957 /* SetBottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBottomBorder.swift; sourceTree = "<group>"; };
+		09747CE622FD84CD00E2CED2 /* SignUpDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataModel.swift; sourceTree = "<group>"; };
+		09755D7922F2C2F000D90957 /* UITextField+SetBottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SetBottomBorder.swift"; sourceTree = "<group>"; };
 		09755D7B22F3375500D90957 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		099D20D622FDC4B500E25894 /* MD5Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5Coding.swift; sourceTree = "<group>"; };
+		099D20D822FDD59000E25894 /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
 		09B9BA6622F9DC9B004FFA1F /* UserNewsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserNewsFeed.storyboard; sourceTree = "<group>"; };
-		09B9BA6822F9DDD5004FFA1F /* Zahtjevi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Zahtjevi.storyboard; sourceTree = "<group>"; };
-		09B9BA6A22F9DEC3004FFA1F /* Profil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profil.storyboard; sourceTree = "<group>"; };
-		09B9BA6D22F9E0C0004FFA1F /* Vijesti.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vijesti.storyboard; sourceTree = "<group>"; };
-		09B9BA6F22F9E13C004FFA1F /* ZahtjeviAdmin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ZahtjeviAdmin.storyboard; sourceTree = "<group>"; };
-		09B9BA7122F9E1A5004FFA1F /* Korisnici.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Korisnici.storyboard; sourceTree = "<group>"; };
-		09B9BA7322F9E204004FFA1F /* ProfilAdmin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilAdmin.storyboard; sourceTree = "<group>"; };
-		09B9BA7F22FB44FE004FFA1F /* KorisniciController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KorisniciController.swift; sourceTree = "<group>"; };
-		09B9BA8122FB45F2004FFA1F /* KorisnikCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KorisnikCell.swift; sourceTree = "<group>"; };
+		09B9BA6822F9DDD5004FFA1F /* Requests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Requests.storyboard; sourceTree = "<group>"; };
+		09B9BA6A22F9DEC3004FFA1F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		09B9BA6D22F9E0C0004FFA1F /* NewsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsFeed.storyboard; sourceTree = "<group>"; };
+		09B9BA6F22F9E13C004FFA1F /* AdminRequests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdminRequests.storyboard; sourceTree = "<group>"; };
+		09B9BA7122F9E1A5004FFA1F /* NewUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewUser.storyboard; sourceTree = "<group>"; };
+		09B9BA7322F9E204004FFA1F /* AdminProfle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdminProfle.storyboard; sourceTree = "<group>"; };
+		09B9BA7F22FB44FE004FFA1F /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		09B9BA8122FB45F2004FFA1F /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		09B9BA8322FB4C03004FFA1F /* Korisnici.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Korisnici.swift; sourceTree = "<group>"; };
 		09C8092022F01CB30003674B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		09C8092422F039CE0003674B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		09C8092622F03BE20003674B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		09E78E7C22EECD9B005F5390 /* MojGrad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MojGrad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E78E7F22EECD9B005F5390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09E78E8122EECD9B005F5390 /* FirstLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLogin.swift; sourceTree = "<group>"; };
+		09E78E8122EECD9B005F5390 /* FirstLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoginViewController.swift; sourceTree = "<group>"; };
 		09E78E8422EECD9B005F5390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09E78E8622EECD9B005F5390 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09E78E8922EECD9B005F5390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09E78E8B22EECD9B005F5390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09E78E9522EEE793005F5390 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
-		09E78E9722EF017D005F5390 /* SetUpGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpGradient.swift; sourceTree = "<group>"; };
+		09E78E9522EEE793005F5390 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		09E78E9722EF017D005F5390 /* UIButtonWithGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonWithGradient.swift; sourceTree = "<group>"; };
 		6BFF5B0E76527D2EF3467D3F /* Pods_MojGrad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MojGrad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD94260DA189955DF85243B /* Pods-MojGrad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MojGrad.debug.xcconfig"; path = "Target Support Files/Pods-MojGrad/Pods-MojGrad.debug.xcconfig"; sourceTree = "<group>"; };
 		8EE5526CD0C4C961211E6B14 /* Pods-MojGrad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MojGrad.release.xcconfig"; path = "Target Support Files/Pods-MojGrad/Pods-MojGrad.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,12 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		099D20D022FDBF3D00E25894 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				09E78E9722EF017D005F5390 /* UIButtonWithGradient.swift */,
+				09755D7922F2C2F000D90957 /* UITextField+SetBottomBorder.swift */,
+				099D20D622FDC4B500E25894 /* MD5Coding.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		09B9BA6322F9DAAB004FFA1F /* KorisnikStoryboards */ = {
 			isa = PBXGroup;
 			children = (
 				09B9BA6622F9DC9B004FFA1F /* UserNewsFeed.storyboard */,
-				09B9BA6822F9DDD5004FFA1F /* Zahtjevi.storyboard */,
-				09B9BA6A22F9DEC3004FFA1F /* Profil.storyboard */,
+				09B9BA6822F9DDD5004FFA1F /* Requests.storyboard */,
+				09B9BA6A22F9DEC3004FFA1F /* Profile.storyboard */,
 			);
 			path = KorisnikStoryboards;
 			sourceTree = "<group>";
@@ -89,10 +105,10 @@
 		09B9BA6C22F9E080004FFA1F /* AdminStoryboards */ = {
 			isa = PBXGroup;
 			children = (
-				09B9BA6D22F9E0C0004FFA1F /* Vijesti.storyboard */,
-				09B9BA6F22F9E13C004FFA1F /* ZahtjeviAdmin.storyboard */,
-				09B9BA7122F9E1A5004FFA1F /* Korisnici.storyboard */,
-				09B9BA7322F9E204004FFA1F /* ProfilAdmin.storyboard */,
+				09B9BA6D22F9E0C0004FFA1F /* NewsFeed.storyboard */,
+				09B9BA6F22F9E13C004FFA1F /* AdminRequests.storyboard */,
+				09B9BA7122F9E1A5004FFA1F /* NewUser.storyboard */,
+				09B9BA7322F9E204004FFA1F /* AdminProfle.storyboard */,
 			);
 			path = AdminStoryboards;
 			sourceTree = "<group>";
@@ -104,8 +120,6 @@
 				09B9BA6C22F9E080004FFA1F /* AdminStoryboards */,
 				09E78E8322EECD9B005F5390 /* Main.storyboard */,
 				09E78E8822EECD9B005F5390 /* LaunchScreen.storyboard */,
-				09E78E9722EF017D005F5390 /* SetUpGradient.swift */,
-				09755D7922F2C2F000D90957 /* SetBottomBorder.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,11 +154,12 @@
 		09E78E7E22EECD9B005F5390 /* MojGrad */ = {
 			isa = PBXGroup;
 			children = (
+				09E78E9322EECDC9005F5390 /* Services */,
+				099D20D022FDBF3D00E25894 /* Extensions */,
 				09C8092322F0374B0003674B /* Database */,
 				09E78E9122EECDB5005F5390 /* Models */,
 				09E78E9422EECDEE005F5390 /* Controllers */,
 				09C8092222F021850003674B /* Views */,
-				09E78E9322EECDC9005F5390 /* Services */,
 				09E78E8622EECD9B005F5390 /* Assets.xcassets */,
 				09E78E8B22EECD9B005F5390 /* Info.plist */,
 			);
@@ -156,6 +171,7 @@
 			children = (
 				09755D7B22F3375500D90957 /* Keys.swift */,
 				09B9BA8322FB4C03004FFA1F /* Korisnici.swift */,
+				09747CE622FD84CD00E2CED2 /* SignUpDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,6 +179,7 @@
 		09E78E9322EECDC9005F5390 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				099D20D822FDD59000E25894 /* RegistrationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -171,11 +188,11 @@
 			isa = PBXGroup;
 			children = (
 				09E78E7F22EECD9B005F5390 /* AppDelegate.swift */,
-				09E78E8122EECD9B005F5390 /* FirstLogin.swift */,
+				09E78E8122EECD9B005F5390 /* FirstLoginViewController.swift */,
 				09C8092022F01CB30003674B /* LoginViewController.swift */,
-				09E78E9522EEE793005F5390 /* Registration.swift */,
-				09B9BA7F22FB44FE004FFA1F /* KorisniciController.swift */,
-				09B9BA8122FB45F2004FFA1F /* KorisnikCell.swift */,
+				09E78E9522EEE793005F5390 /* RegistrationViewController.swift */,
+				09B9BA7F22FB44FE004FFA1F /* UsersViewController.swift */,
+				09B9BA8122FB45F2004FFA1F /* UserCell.swift */,
 				0915A42922FC1DFC002536CF /* NewUserController.swift */,
 			);
 			path = Controllers;
@@ -232,6 +249,7 @@
 				TargetAttributes = {
 					09E78E7B22EECD9B005F5390 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -259,13 +277,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E78E8A22EECD9B005F5390 /* LaunchScreen.storyboard in Resources */,
-				09B9BA6E22F9E0C0004FFA1F /* Vijesti.storyboard in Resources */,
-				09B9BA6922F9DDD5004FFA1F /* Zahtjevi.storyboard in Resources */,
-				09B9BA7222F9E1A5004FFA1F /* Korisnici.storyboard in Resources */,
-				09B9BA6B22F9DEC3004FFA1F /* Profil.storyboard in Resources */,
+				09B9BA6E22F9E0C0004FFA1F /* NewsFeed.storyboard in Resources */,
+				09B9BA6922F9DDD5004FFA1F /* Requests.storyboard in Resources */,
+				09B9BA7222F9E1A5004FFA1F /* NewUser.storyboard in Resources */,
+				09B9BA6B22F9DEC3004FFA1F /* Profile.storyboard in Resources */,
 				09E78E8722EECD9B005F5390 /* Assets.xcassets in Resources */,
-				09B9BA7422F9E204004FFA1F /* ProfilAdmin.storyboard in Resources */,
-				09B9BA7022F9E13C004FFA1F /* ZahtjeviAdmin.storyboard in Resources */,
+				09B9BA7422F9E204004FFA1F /* AdminProfle.storyboard in Resources */,
+				09B9BA7022F9E13C004FFA1F /* AdminRequests.storyboard in Resources */,
 				09B9BA6722F9DC9B004FFA1F /* UserNewsFeed.storyboard in Resources */,
 				09E78E8522EECD9B005F5390 /* Main.storyboard in Resources */,
 			);
@@ -322,17 +340,20 @@
 			files = (
 				09C8092522F039CE0003674B /* News.swift in Sources */,
 				09B9BA8422FB4C03004FFA1F /* Korisnici.swift in Sources */,
-				09B9BA8022FB44FE004FFA1F /* KorisniciController.swift in Sources */,
-				09E78E9622EEE793005F5390 /* Registration.swift in Sources */,
-				09E78E9822EF017D005F5390 /* SetUpGradient.swift in Sources */,
-				09E78E8222EECD9B005F5390 /* FirstLogin.swift in Sources */,
+				09B9BA8022FB44FE004FFA1F /* UsersViewController.swift in Sources */,
+				09E78E9622EEE793005F5390 /* RegistrationViewController.swift in Sources */,
+				09E78E9822EF017D005F5390 /* UIButtonWithGradient.swift in Sources */,
+				09E78E8222EECD9B005F5390 /* FirstLoginViewController.swift in Sources */,
 				09C8092122F01CB30003674B /* LoginViewController.swift in Sources */,
+				099D20D922FDD59000E25894 /* RegistrationService.swift in Sources */,
 				0915A42A22FC1DFC002536CF /* NewUserController.swift in Sources */,
 				09C8092722F03BE20003674B /* RealmManager.swift in Sources */,
 				09E78E8022EECD9B005F5390 /* AppDelegate.swift in Sources */,
 				09755D7C22F3375500D90957 /* Keys.swift in Sources */,
-				09755D7A22F2C2F000D90957 /* SetBottomBorder.swift in Sources */,
-				09B9BA8222FB45F2004FFA1F /* KorisnikCell.swift in Sources */,
+				099D20D722FDC4B500E25894 /* MD5Coding.swift in Sources */,
+				09747CE722FD84CD00E2CED2 /* SignUpDataModel.swift in Sources */,
+				09755D7A22F2C2F000D90957 /* UITextField+SetBottomBorder.swift in Sources */,
+				09B9BA8222FB45F2004FFA1F /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +500,7 @@
 			baseConfigurationReference = 8BD94260DA189955DF85243B /* Pods-MojGrad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MojGrad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -487,8 +509,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MojGrad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/BuildHeaders\"/**";
 			};
 			name = Debug;
 		};
@@ -497,6 +521,7 @@
 			baseConfigurationReference = 8EE5526CD0C4C961211E6B14 /* Pods-MojGrad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MojGrad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -507,6 +532,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/BuildHeaders\"/**";
 			};
 			name = Release;
 		};

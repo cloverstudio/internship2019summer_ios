@@ -7,21 +7,34 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class Registration: UIViewController {
+class RegistrationViewController: UIViewController {
     
     let defaults = UserDefaults.standard
+    let loginUrl = "https://intern2019dev.clover.studio/users/register"
+    var oib : String = ""
+    var email : String = ""
+    var pass : String = ""
     
-    var oibFieldCheck = false { didSet {
-        correctInputs = oibFieldCheck && emailFieldCheck && passFieldCheck
+    //var regData = SignUpDataModel()
+    
+    var registrationService = RegistrationService()
+    
+    var oibFieldCheck = false {
+        didSet {
+            correctInputs = oibFieldCheck && emailFieldCheck && passFieldCheck
         }
     }
-    var emailFieldCheck = false { didSet {
-        correctInputs = oibFieldCheck && emailFieldCheck && passFieldCheck
+    var emailFieldCheck = false {
+        didSet {
+            correctInputs = oibFieldCheck && emailFieldCheck && passFieldCheck
         }
     }
-    var passFieldCheck = false { didSet {
-        correctInputs = oibFieldCheck && emailFieldCheck && passFieldCheck
+    var passFieldCheck = false {
+        didSet {
+            correctInputs = oibFieldCheck && emailFieldCheck && passFieldCheck
         }
     }
     
@@ -81,10 +94,17 @@ class Registration: UIViewController {
         passField.addTarget(self, action: #selector(checkPass), for: .editingChanged)
     
         checkForUserData()
+        
     }
     
     @IBAction func registrationButtonTapped(_ sender: Any) {
         saveUserData()
+        oib = oibField.text ?? ""
+        email = emailField.text ?? ""
+        pass = passField.text ?? ""
+        let md5Pass = pass.md5Value
+        let param : [String : String] = ["oib" : oib, "email" : email, "password" : md5Pass]
+        registrationService.sendData(url: loginUrl, parameters: param)
     }
     
     @IBAction func passIconTapped(_ sender: UIButton) {
@@ -169,4 +189,6 @@ class Registration: UIViewController {
         passField.text = pass
         
     }
+
 }
+

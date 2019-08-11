@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KorisnikCell: UITableViewCell {
+class UserCell: UITableViewCell {
 
     @IBOutlet weak var korisnikImage: UIImageView!
     @IBOutlet weak var imeKorisnika: UILabel!
