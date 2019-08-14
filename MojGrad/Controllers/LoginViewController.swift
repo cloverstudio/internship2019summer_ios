@@ -26,10 +26,10 @@ class LoginViewController: UIViewController {
         }
         }
     }
-
     var isOn = false
     let defaults = UserDefaults.standard
     var pass: String =  ""
+    var loginService = LoginService()
     
     @IBOutlet weak var logoView: UIImageView!
     @IBOutlet weak var infoLabel: UILabel!
@@ -104,6 +104,18 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func logInButtonTapped(_ sender: UIButton) {
+        guard let email = emailField.text else {
+            return
+        }
+        guard let password = passwordField.text else {
+            return
+        }
+        let md5Pass = password.md5Value
+        let param : [String : String] = ["email" : email, "password" : md5Pass]
+        loginService.fetchData(parameters: param) { logJSON in
+            
+            
+        }
     }
     
     func isValidEmail(emailID:String) -> Bool {

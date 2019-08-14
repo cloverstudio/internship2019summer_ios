@@ -18,7 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        if UserDefaults.standard.bool(forKey: Keys.userRegistered) {
+        if UserDefaults.standard.bool(forKey: Keys.rememberMe) {
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            if UserDefaults.standard.integer(forKey: Keys.personRoleId) == 2 {
+                let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+                self.window?.rootViewController = vc
+            }
+        } else if UserDefaults.standard.bool(forKey: Keys.rememberMe) == false{
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
             self.window?.rootViewController = vc

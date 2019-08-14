@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0915A42A22FC1DFC002536CF /* NewUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0915A42922FC1DFC002536CF /* NewUserController.swift */; };
-		09747CE722FD84CD00E2CED2 /* SignUpDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09747CE622FD84CD00E2CED2 /* SignUpDataModel.swift */; };
+		094006D12302F291008076C0 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094006D02302F291008076C0 /* RegistrationModel.swift */; };
+		096653E1230151F000D833E8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096653E0230151F000D833E8 /* LoginService.swift */; };
+		096653E3230175C500D833E8 /* UIViewController+LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096653E2230175C500D833E8 /* UIViewController+LoadingScreen.swift */; };
+		096653E523017AA900D833E8 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096653E423017AA900D833E8 /* UIViewController+Alert.swift */; };
+		096653E72301870F00D833E8 /* UserNewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096653E62301870F00D833E8 /* UserNewsFeedViewController.swift */; };
+		096653E92301A68400D833E8 /* AdminNewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096653E82301A68400D833E8 /* AdminNewsFeedViewController.swift */; };
 		09755D7A22F2C2F000D90957 /* UITextField+SetBottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09755D7922F2C2F000D90957 /* UITextField+SetBottomBorder.swift */; };
 		09755D7C22F3375500D90957 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09755D7B22F3375500D90957 /* Keys.swift */; };
 		099D20D722FDC4B500E25894 /* MD5Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099D20D622FDC4B500E25894 /* MD5Coding.swift */; };
@@ -38,7 +43,12 @@
 
 /* Begin PBXFileReference section */
 		0915A42922FC1DFC002536CF /* NewUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserController.swift; sourceTree = "<group>"; };
-		09747CE622FD84CD00E2CED2 /* SignUpDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataModel.swift; sourceTree = "<group>"; };
+		094006D02302F291008076C0 /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
+		096653E0230151F000D833E8 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		096653E2230175C500D833E8 /* UIViewController+LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingScreen.swift"; sourceTree = "<group>"; };
+		096653E423017AA900D833E8 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		096653E62301870F00D833E8 /* UserNewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNewsFeedViewController.swift; sourceTree = "<group>"; };
+		096653E82301A68400D833E8 /* AdminNewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminNewsFeedViewController.swift; sourceTree = "<group>"; };
 		09755D7922F2C2F000D90957 /* UITextField+SetBottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SetBottomBorder.swift"; sourceTree = "<group>"; };
 		09755D7B22F3375500D90957 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		099D20D622FDC4B500E25894 /* MD5Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5Coding.swift; sourceTree = "<group>"; };
@@ -87,6 +97,8 @@
 			children = (
 				09E78E9722EF017D005F5390 /* UIButtonWithGradient.swift */,
 				09755D7922F2C2F000D90957 /* UITextField+SetBottomBorder.swift */,
+				096653E2230175C500D833E8 /* UIViewController+LoadingScreen.swift */,
+				096653E423017AA900D833E8 /* UIViewController+Alert.swift */,
 				099D20D622FDC4B500E25894 /* MD5Coding.swift */,
 			);
 			path = Extensions;
@@ -171,7 +183,7 @@
 			children = (
 				09755D7B22F3375500D90957 /* Keys.swift */,
 				09B9BA8322FB4C03004FFA1F /* Korisnici.swift */,
-				09747CE622FD84CD00E2CED2 /* SignUpDataModel.swift */,
+				094006D02302F291008076C0 /* RegistrationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				099D20D822FDD59000E25894 /* RegistrationService.swift */,
+				096653E0230151F000D833E8 /* LoginService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -194,6 +207,8 @@
 				09B9BA7F22FB44FE004FFA1F /* UsersViewController.swift */,
 				09B9BA8122FB45F2004FFA1F /* UserCell.swift */,
 				0915A42922FC1DFC002536CF /* NewUserController.swift */,
+				096653E62301870F00D833E8 /* UserNewsFeedViewController.swift */,
+				096653E82301A68400D833E8 /* AdminNewsFeedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -338,20 +353,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				096653E1230151F000D833E8 /* LoginService.swift in Sources */,
+				096653E3230175C500D833E8 /* UIViewController+LoadingScreen.swift in Sources */,
 				09C8092522F039CE0003674B /* News.swift in Sources */,
 				09B9BA8422FB4C03004FFA1F /* Korisnici.swift in Sources */,
 				09B9BA8022FB44FE004FFA1F /* UsersViewController.swift in Sources */,
 				09E78E9622EEE793005F5390 /* RegistrationViewController.swift in Sources */,
 				09E78E9822EF017D005F5390 /* UIButtonWithGradient.swift in Sources */,
+				096653E92301A68400D833E8 /* AdminNewsFeedViewController.swift in Sources */,
+				094006D12302F291008076C0 /* RegistrationModel.swift in Sources */,
 				09E78E8222EECD9B005F5390 /* FirstLoginViewController.swift in Sources */,
 				09C8092122F01CB30003674B /* LoginViewController.swift in Sources */,
 				099D20D922FDD59000E25894 /* RegistrationService.swift in Sources */,
 				0915A42A22FC1DFC002536CF /* NewUserController.swift in Sources */,
 				09C8092722F03BE20003674B /* RealmManager.swift in Sources */,
+				096653E72301870F00D833E8 /* UserNewsFeedViewController.swift in Sources */,
 				09E78E8022EECD9B005F5390 /* AppDelegate.swift in Sources */,
 				09755D7C22F3375500D90957 /* Keys.swift in Sources */,
 				099D20D722FDC4B500E25894 /* MD5Coding.swift in Sources */,
-				09747CE722FD84CD00E2CED2 /* SignUpDataModel.swift in Sources */,
+				096653E523017AA900D833E8 /* UIViewController+Alert.swift in Sources */,
 				09755D7A22F2C2F000D90957 /* UITextField+SetBottomBorder.swift in Sources */,
 				09B9BA8222FB45F2004FFA1F /* UserCell.swift in Sources */,
 			);

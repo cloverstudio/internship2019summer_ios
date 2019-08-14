@@ -12,36 +12,22 @@ import SwiftyJSON
 
 class RegistrationService {
     
-    var regData = SignUpDataModel()
+    typealias WebServiceRepsonse = (JSON?) -> Void
     
-    func sendData(url: String, parameters: [String : String]) {
-        Alamofire.request(url, method: .post, parameters: parameters).responseJSON {
+    func sendData(parameters: [String : String], completion: @escaping WebServiceRepsonse) {
+        guard let registrationURL = URL(string : "https://intern2019dev.clover.studio/users/register") else {
+            completion(nil)
+            return
+        }
+        Alamofire.request(registrationURL, method: .post, parameters: parameters).responseJSON {
             response in
             if response.result.isSuccess {
-                print("Yeah")
-                let registerJSON : JSON = JSON(response.result.value!)
-                self.updateData(json: registerJSON)
-            } else {
-                print("Error")
+                let json = JSON(response.result.value as Any)
+                completion(json)
+            } else if response.result.isFailure {
+                print(response.result.error as Any)
+                completion(nil)
             }
-            
         }
-    }
-    
-    func updateData(json: JSON) {
-        if let tmpEmail = json["data"]["user"]["email"].string {
-            regData.email = tmpEmail
-            regData.oib = json["data"]["user"]["oib"].stringValue
-            regData.id = json["data"]["user"]["id"].intValue
-            regData.personRoleId = json["data"]["user"]["personsRoleId"].intValue
-            regData.password = json["data"]["user"]["password"].stringValue
-            regData.jwt = json["data"]["user"]["jwt"].stringValue
-        }
-        print(regData.email)
-        print(regData.oib)
-        print(regData.id)
-        print(regData.personRoleId)
-        print(regData.jwt)
-        print(regData.password)
     }
 }

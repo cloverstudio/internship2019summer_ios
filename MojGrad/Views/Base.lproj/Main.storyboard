@@ -184,7 +184,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfl-R7-Qle">
-                                <rect key="frame" x="369" y="656" width="25" height="22"/>
+                                <rect key="frame" x="369" y="656" width="25" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="HCb-pD-paZ"/>
                                 </constraints>
@@ -297,7 +297,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="registrationButtonTapped:" destination="wTG-Te-h0V" eventType="touchUpInside" id="Bes-gj-0Gh"/>
-                                    <segue destination="zLG-qP-Edc" kind="show" id="dYz-JX-jrb"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="moj_grad_small_logo" translatesAutoresizingMaskIntoConstraints="NO" id="69T-xp-pmG">
@@ -371,6 +370,7 @@
                         <outlet property="validEmailLabel" destination="yPl-Vu-UKZ" id="ewi-GL-T8B"/>
                         <outlet property="validOibLabel" destination="Gf7-Wk-w1b" id="FxI-q9-qwZ"/>
                         <outlet property="validPassLabel" destination="119-PZ-E1M" id="0bx-VN-N8J"/>
+                        <segue destination="zLG-qP-Edc" kind="show" identifier="NewsFeed" id="1VM-UR-z2g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVc-cz-zQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -684,7 +684,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="nso-Vh-EP0">
             <objects>
-                <tabBarController id="zLG-qP-Edc" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="zLG-qP-Edc" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZDI-dl-n41">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
