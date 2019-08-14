@@ -119,7 +119,7 @@ class RegistrationViewController: UIViewController {
                 self.reg.personRoleId = data["data"]["user"]["personsRoleId"].intValue
                 UserDefaults.standard.set(self.reg.jwt, forKey: Keys.jasonWebToken)
                 UserDefaults.standard.set(self.reg.personRoleId, forKey: Keys.personRoleId)
-                self.performSegue(withIdentifier: "NewsFeed", sender: nil)
+                self.performSegue(withIdentifier: "Users", sender: nil)
                 
             }
             else if let tmpError = data["data"]["error"]["error_code"].string {

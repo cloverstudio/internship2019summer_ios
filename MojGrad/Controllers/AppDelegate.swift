@@ -21,7 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UserDefaults.standard.bool(forKey: Keys.rememberMe) {
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
             if UserDefaults.standard.integer(forKey: Keys.personRoleId) == 2 {
-                let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+                let vc = storyboard.instantiateViewController(withIdentifier: "UserTabBarController")
+                self.window?.rootViewController = vc
+            } else if UserDefaults.standard.integer(forKey: Keys.personRoleId) == 1 {
+                let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "AdminTabBarController")
                 self.window?.rootViewController = vc
             }
         } else if UserDefaults.standard.bool(forKey: Keys.rememberMe) == false{

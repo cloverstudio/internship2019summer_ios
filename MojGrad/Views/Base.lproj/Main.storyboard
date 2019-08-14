@@ -370,7 +370,7 @@
                         <outlet property="validEmailLabel" destination="yPl-Vu-UKZ" id="ewi-GL-T8B"/>
                         <outlet property="validOibLabel" destination="Gf7-Wk-w1b" id="FxI-q9-qwZ"/>
                         <outlet property="validPassLabel" destination="119-PZ-E1M" id="0bx-VN-N8J"/>
-                        <segue destination="zLG-qP-Edc" kind="show" identifier="NewsFeed" id="1VM-UR-z2g"/>
+                        <segue destination="zLG-qP-Edc" kind="show" identifier="User" id="1VM-UR-z2g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVc-cz-zQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -491,7 +491,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="logInButtonTapped:" destination="a1G-rC-Jcf" eventType="touchUpInside" id="yCJ-Ft-a9g"/>
-                                    <segue destination="KO5-nS-xYa" kind="show" id="68S-MX-DKv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0Y-Ww-giL" customClass="SetUpGradient" customModule="MojGrad" customModuleProvider="target">
@@ -585,6 +584,8 @@
                         <outlet property="rememberMeLabel" destination="Foe-TN-YsE" id="AWI-tX-AfV"/>
                         <outlet property="validEmailLabel" destination="c0V-LK-ykj" id="157-XS-PdI"/>
                         <outlet property="validPassLabel" destination="2IT-ip-nvm" id="AGN-tC-vY0"/>
+                        <segue destination="KO5-nS-xYa" kind="show" identifier="Admin" id="BwV-C3-eT5"/>
+                        <segue destination="zLG-qP-Edc" kind="show" identifier="User" id="ylJ-bD-W3o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7NR-JB-lRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -604,7 +605,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="GcC-6u-iOj">
             <objects>
-                <tabBarController id="KO5-nS-xYa" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="AdminTabBarController" id="KO5-nS-xYa" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sY0-3a-yAl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -684,7 +685,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="nso-Vh-EP0">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" id="zLG-qP-Edc" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="UserTabBarController" id="zLG-qP-Edc" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZDI-dl-n41">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -710,6 +711,7 @@
         <image name="remember_me_checkmark_icon" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ylJ-bD-W3o"/>
         <segue reference="E2i-BO-unx"/>
         <segue reference="PPs-oT-wwd"/>
     </inferredMetricsTieBreakers>
