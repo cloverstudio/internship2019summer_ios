@@ -10,6 +10,9 @@ import UIKit
 
 class NewUserController: UIViewController {
     
+    static let CONSTANT_REFRESH_USERS = "CONSTANT_REFRESH_USERS"
+    var newUser = AddNewUserService()
+    
     @IBOutlet weak var newProfileImageButton: UIButton!
     //User info fields
     @IBOutlet weak var usernameField: UITextField!
@@ -30,7 +33,7 @@ class NewUserController: UIViewController {
         
         passField.isSecureTextEntry = true
         
-        createUserButton.isEnabled = false
+        createUserButton.isEnabled = true
         
     }
     
@@ -50,8 +53,32 @@ class NewUserController: UIViewController {
             passField.isSecureTextEntry = true
         }
     }
-    
-    
+    @IBAction func addNewUserButtonTapped(_ sender: UIButton) {
+        guard let userName = usernameField.text else { return }
+        guard let oib = oibField.text else { return }
+        guard let email = emailField.text else { return }
+        guard let password = passField.text else { return }
+        
+        let md5Pass = password.md5Value
+        
+        let userParam : [String : String] = ["userName" : userName, "firstName" : userName, "oib" : oib, "email" : email, "password" : md5Pass]
+        
+        newUser.sendUserData(parameters: userParam) { userJSON in
+            guard let data = userJSON else {
+                self.showAlert(withTitle: "Error!", withMessage: "Server down!")
+                return
+            }
+            if let _ = data["data"]["user"]["email"].string {
+                let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
+                    self.navigationController?.popViewController(animated: true)
+                    NotificationCenter.default.post(name: Notification.Name(NewUserController.CONSTANT_REFRESH_USERS), object: nil)
+                })
+                self.showAlert(withTitle: "Super", withMessage: "Korisnik uspješno kreiran", okAction: ok)
+            }
+            else if let _ = data["data"]["error"]["error_code"].string {
+                let errDescription = data["data"]["error"]["error_description"].stringValue
+                self.showAlert(withTitle: "Error!", withMessage: errDescription)
+            }
+        }
+    }
 }
-
-

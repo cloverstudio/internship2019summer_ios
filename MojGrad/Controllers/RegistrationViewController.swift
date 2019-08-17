@@ -115,9 +115,9 @@ class RegistrationViewController: UIViewController {
             }
             
             if let jwt = data["data"]["user"]["jwt"].string {
-                self.reg.jwt = jwt
+                //self.reg.jwt = jwt
                 self.reg.personRoleId = data["data"]["user"]["personsRoleId"].intValue
-                UserDefaults.standard.set(self.reg.jwt, forKey: Keys.jasonWebToken)
+                UserDefaults.standard.set(jwt, forKey: Keys.jasonWebToken)
                 UserDefaults.standard.set(self.reg.personRoleId, forKey: Keys.personRoleId)
                 self.performSegue(withIdentifier: "Users", sender: nil)
                 

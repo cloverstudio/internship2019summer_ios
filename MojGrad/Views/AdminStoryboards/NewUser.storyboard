@@ -240,6 +240,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addNewUserButtonTapped:" destination="4RD-0U-RFM" eventType="touchUpInside" id="qTd-Ik-8El"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_user_profile_icon" translatesAutoresizingMaskIntoConstraints="NO" id="7S1-kC-WVz">
                                 <rect key="frame" x="117" y="228" width="180" height="44"/>

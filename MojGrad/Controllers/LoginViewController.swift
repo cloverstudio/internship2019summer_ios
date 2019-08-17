@@ -156,7 +156,6 @@ class LoginViewController: UIViewController {
                 }
             }
         }
-        
     }
     
     func isValidEmail(emailID:String) -> Bool {

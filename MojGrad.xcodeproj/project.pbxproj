@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0915A42A22FC1DFC002536CF /* NewUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0915A42922FC1DFC002536CF /* NewUserController.swift */; };
 		094006D12302F291008076C0 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094006D02302F291008076C0 /* RegistrationModel.swift */; };
+		094006D42306D294008076C0 /* AddNewUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094006D32306D294008076C0 /* AddNewUserService.swift */; };
 		096653E1230151F000D833E8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096653E0230151F000D833E8 /* LoginService.swift */; };
 		096653E3230175C500D833E8 /* UIViewController+LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096653E2230175C500D833E8 /* UIViewController+LoadingScreen.swift */; };
 		096653E523017AA900D833E8 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096653E423017AA900D833E8 /* UIViewController+Alert.swift */; };
@@ -27,10 +28,10 @@
 		09B9BA7422F9E204004FFA1F /* AdminProfle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA7322F9E204004FFA1F /* AdminProfle.storyboard */; };
 		09B9BA8022FB44FE004FFA1F /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9BA7F22FB44FE004FFA1F /* UsersViewController.swift */; };
 		09B9BA8222FB45F2004FFA1F /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9BA8122FB45F2004FFA1F /* UserCell.swift */; };
-		09B9BA8422FB4C03004FFA1F /* Korisnici.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9BA8322FB4C03004FFA1F /* Korisnici.swift */; };
 		09C8092122F01CB30003674B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092022F01CB30003674B /* LoginViewController.swift */; };
 		09C8092522F039CE0003674B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092422F039CE0003674B /* News.swift */; };
 		09C8092722F03BE20003674B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092622F03BE20003674B /* RealmManager.swift */; };
+		09D1B3F723087B0D00B4A308 /* APIUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1B3F623087B0D00B4A308 /* APIUsers.swift */; };
 		09E78E8022EECD9B005F5390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E7F22EECD9B005F5390 /* AppDelegate.swift */; };
 		09E78E8222EECD9B005F5390 /* FirstLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E8122EECD9B005F5390 /* FirstLoginViewController.swift */; };
 		09E78E8522EECD9B005F5390 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E78E8322EECD9B005F5390 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		0915A42922FC1DFC002536CF /* NewUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserController.swift; sourceTree = "<group>"; };
 		094006D02302F291008076C0 /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
+		094006D32306D294008076C0 /* AddNewUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserService.swift; sourceTree = "<group>"; };
 		096653E0230151F000D833E8 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		096653E2230175C500D833E8 /* UIViewController+LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingScreen.swift"; sourceTree = "<group>"; };
 		096653E423017AA900D833E8 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
@@ -62,10 +64,10 @@
 		09B9BA7322F9E204004FFA1F /* AdminProfle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdminProfle.storyboard; sourceTree = "<group>"; };
 		09B9BA7F22FB44FE004FFA1F /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		09B9BA8122FB45F2004FFA1F /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
-		09B9BA8322FB4C03004FFA1F /* Korisnici.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Korisnici.swift; sourceTree = "<group>"; };
 		09C8092022F01CB30003674B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		09C8092422F039CE0003674B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		09C8092622F03BE20003674B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		09D1B3F623087B0D00B4A308 /* APIUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUsers.swift; sourceTree = "<group>"; };
 		09E78E7C22EECD9B005F5390 /* MojGrad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MojGrad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E78E7F22EECD9B005F5390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09E78E8122EECD9B005F5390 /* FirstLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoginViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		09C8092222F021850003674B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				09D1B3F82308854500B4A308 /* Cells */,
 				09B9BA6322F9DAAB004FFA1F /* KorisnikStoryboards */,
 				09B9BA6C22F9E080004FFA1F /* AdminStoryboards */,
 				09E78E8322EECD9B005F5390 /* Main.storyboard */,
@@ -143,6 +146,14 @@
 				09C8092622F03BE20003674B /* RealmManager.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		09D1B3F82308854500B4A308 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				09B9BA8122FB45F2004FFA1F /* UserCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		09E78E7322EECD9B005F5390 = {
@@ -182,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				09755D7B22F3375500D90957 /* Keys.swift */,
-				09B9BA8322FB4C03004FFA1F /* Korisnici.swift */,
 				094006D02302F291008076C0 /* RegistrationModel.swift */,
 			);
 			path = Models;
@@ -193,6 +203,8 @@
 			children = (
 				099D20D822FDD59000E25894 /* RegistrationService.swift */,
 				096653E0230151F000D833E8 /* LoginService.swift */,
+				094006D32306D294008076C0 /* AddNewUserService.swift */,
+				09D1B3F623087B0D00B4A308 /* APIUsers.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -205,7 +217,6 @@
 				09C8092022F01CB30003674B /* LoginViewController.swift */,
 				09E78E9522EEE793005F5390 /* RegistrationViewController.swift */,
 				09B9BA7F22FB44FE004FFA1F /* UsersViewController.swift */,
-				09B9BA8122FB45F2004FFA1F /* UserCell.swift */,
 				0915A42922FC1DFC002536CF /* NewUserController.swift */,
 				096653E62301870F00D833E8 /* UserNewsFeedViewController.swift */,
 				096653E82301A68400D833E8 /* AdminNewsFeedViewController.swift */,
@@ -356,7 +367,6 @@
 				096653E1230151F000D833E8 /* LoginService.swift in Sources */,
 				096653E3230175C500D833E8 /* UIViewController+LoadingScreen.swift in Sources */,
 				09C8092522F039CE0003674B /* News.swift in Sources */,
-				09B9BA8422FB4C03004FFA1F /* Korisnici.swift in Sources */,
 				09B9BA8022FB44FE004FFA1F /* UsersViewController.swift in Sources */,
 				09E78E9622EEE793005F5390 /* RegistrationViewController.swift in Sources */,
 				09E78E9822EF017D005F5390 /* UIButtonWithGradient.swift in Sources */,
@@ -364,6 +374,7 @@
 				094006D12302F291008076C0 /* RegistrationModel.swift in Sources */,
 				09E78E8222EECD9B005F5390 /* FirstLoginViewController.swift in Sources */,
 				09C8092122F01CB30003674B /* LoginViewController.swift in Sources */,
+				09D1B3F723087B0D00B4A308 /* APIUsers.swift in Sources */,
 				099D20D922FDD59000E25894 /* RegistrationService.swift in Sources */,
 				0915A42A22FC1DFC002536CF /* NewUserController.swift in Sources */,
 				09C8092722F03BE20003674B /* RealmManager.swift in Sources */,
@@ -374,6 +385,7 @@
 				096653E523017AA900D833E8 /* UIViewController+Alert.swift in Sources */,
 				09755D7A22F2C2F000D90957 /* UITextField+SetBottomBorder.swift in Sources */,
 				09B9BA8222FB45F2004FFA1F /* UserCell.swift in Sources */,
+				094006D42306D294008076C0 /* AddNewUserService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
