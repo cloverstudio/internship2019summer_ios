@@ -135,25 +135,18 @@ class LoginViewController: UIViewController {
                 return
             }
             if let jwt = data["data"]["user"]["jwt"].string {
-                self.log.jwt = jwt
-                self.log.personRoleId = data["data"]["user"]["personsRoleId"].intValue
-                UserDefaults.standard.set(self.log.jwt, forKey: Keys.jasonWebToken)
-                UserDefaults.standard.set(self.log.personRoleId, forKey: Keys.personRoleId)
-                if self.log.personRoleId == 1{
+                let personRoleId = data["data"]["user"]["personsRoleId"].intValue
+                UserDefaults.standard.set(jwt, forKey: Keys.jasonWebToken)
+                UserDefaults.standard.set(personRoleId, forKey: Keys.personRoleId)
+                if personRoleId == 1{
                     self.performSegue(withIdentifier: "Admin", sender: nil)
                 }
             }
-            else if let tmpError = data["data"]["error"]["error_code"].string {
-                if tmpError == "1000" {
-                    let errDescription = data["data"]["error"]["error_description"].stringValue
-                    self.showAlert(withTitle: "Error!", withMessage: errDescription)
-                    self.removeSpinner()
-                    
-                } else if tmpError == "1001"{
-                    let errDescription = data["data"]["error"]["error_description"].stringValue
-                    self.showAlert(withTitle: "Error!", withMessage: errDescription)
-                    self.removeSpinner()
-                }
+            else if let _ = data["data"]["error"]["error_code"].string {
+                let errDescription = data["data"]["error"]["error_description"].stringValue
+                self.showAlert(withTitle: "Error!", withMessage: errDescription)
+                self.removeSpinner()
+                
             }
         }
     }

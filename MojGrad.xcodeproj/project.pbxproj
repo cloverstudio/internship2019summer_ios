@@ -32,6 +32,7 @@
 		09C8092522F039CE0003674B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092422F039CE0003674B /* News.swift */; };
 		09C8092722F03BE20003674B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092622F03BE20003674B /* RealmManager.swift */; };
 		09D1B3F723087B0D00B4A308 /* APIUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1B3F623087B0D00B4A308 /* APIUsers.swift */; };
+		09D1B3FA2308884400B4A308 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1B3F92308884400B4A308 /* MainTabBarController.swift */; };
 		09E78E8022EECD9B005F5390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E7F22EECD9B005F5390 /* AppDelegate.swift */; };
 		09E78E8222EECD9B005F5390 /* FirstLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E8122EECD9B005F5390 /* FirstLoginViewController.swift */; };
 		09E78E8522EECD9B005F5390 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E78E8322EECD9B005F5390 /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		09C8092422F039CE0003674B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		09C8092622F03BE20003674B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		09D1B3F623087B0D00B4A308 /* APIUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUsers.swift; sourceTree = "<group>"; };
+		09D1B3F92308884400B4A308 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		09E78E7C22EECD9B005F5390 /* MojGrad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MojGrad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E78E7F22EECD9B005F5390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09E78E8122EECD9B005F5390 /* FirstLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoginViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				0915A42922FC1DFC002536CF /* NewUserController.swift */,
 				096653E62301870F00D833E8 /* UserNewsFeedViewController.swift */,
 				096653E82301A68400D833E8 /* AdminNewsFeedViewController.swift */,
+				09D1B3F92308884400B4A308 /* MainTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				09B9BA8022FB44FE004FFA1F /* UsersViewController.swift in Sources */,
 				09E78E9622EEE793005F5390 /* RegistrationViewController.swift in Sources */,
 				09E78E9822EF017D005F5390 /* UIButtonWithGradient.swift in Sources */,
+				09D1B3FA2308884400B4A308 /* MainTabBarController.swift in Sources */,
 				096653E92301A68400D833E8 /* AdminNewsFeedViewController.swift in Sources */,
 				094006D12302F291008076C0 /* RegistrationModel.swift in Sources */,
 				09E78E8222EECD9B005F5390 /* FirstLoginViewController.swift in Sources */,

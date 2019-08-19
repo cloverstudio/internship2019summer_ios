@@ -77,6 +77,7 @@
                                                 <constraint firstItem="UQT-gG-jan" firstAttribute="top" secondItem="Ogc-9i-tqs" secondAttribute="bottom" constant="8.5" id="yEj-yO-9xD"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="5000" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="emailKorisnika" destination="UQT-gG-jan" id="Ffr-uY-Q6V"/>
                                             <outlet property="imeKorisnika" destination="Ogc-9i-tqs" id="cpg-KX-lK3"/>
