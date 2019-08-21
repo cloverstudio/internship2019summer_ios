@@ -14,9 +14,9 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
 
         if UserDefaults.standard.bool(forKey: Keys.rememberMe) {
-            if UserDefaults.standard.integer(forKey: Keys.personRoleId) == 2 {
+            if UserDefaults.standard.integer(forKey: Keys.personRoleId) == 1 {
                 hideTabBarWithIndex(2)
-            } else if UserDefaults.standard.integer(forKey: Keys.personRoleId) == 1 {
+            } else if UserDefaults.standard.integer(forKey: Keys.personRoleId) == 2 {
             }
         } else if UserDefaults.standard.bool(forKey: Keys.rememberMe) == false{
         }

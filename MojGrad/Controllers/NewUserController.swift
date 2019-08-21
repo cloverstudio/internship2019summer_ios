@@ -53,6 +53,7 @@ class NewUserController: UIViewController {
             passField.isSecureTextEntry = true
         }
     }
+    
     @IBAction func addNewUserButtonTapped(_ sender: UIButton) {
         guard let userName = usernameField.text else { return }
         guard let oib = oibField.text else { return }

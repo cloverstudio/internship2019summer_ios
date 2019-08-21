@@ -25,6 +25,7 @@ class APIUsers {
             response in
             if response.result.isSuccess {
                 let json = JSON(response.result.value as Any)
+                print(self.token)
                 completion(json)
             } else if response.result.isFailure {
                 print(response.result.error as Any)

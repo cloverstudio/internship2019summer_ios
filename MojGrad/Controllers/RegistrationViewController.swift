@@ -89,6 +89,8 @@ class RegistrationViewController: UIViewController {
         
     }
     
+
+    
     @IBAction func registrationButtonTapped(_ sender: Any) {
         guard let oib = oibField.text else {
             return
@@ -156,7 +158,6 @@ class RegistrationViewController: UIViewController {
             
         }
     }
-    
     
     func isValidEmail(emailID:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"

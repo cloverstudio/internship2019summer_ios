@@ -10,6 +10,7 @@
 		0915A42A22FC1DFC002536CF /* NewUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0915A42922FC1DFC002536CF /* NewUserController.swift */; };
 		094006D12302F291008076C0 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094006D02302F291008076C0 /* RegistrationModel.swift */; };
 		094006D42306D294008076C0 /* AddNewUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094006D32306D294008076C0 /* AddNewUserService.swift */; };
+		094ED0FD230C9A9500B43274 /* UserSendNewRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094ED0FC230C9A9500B43274 /* UserSendNewRequestService.swift */; };
 		096653E1230151F000D833E8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096653E0230151F000D833E8 /* LoginService.swift */; };
 		096653E3230175C500D833E8 /* UIViewController+LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096653E2230175C500D833E8 /* UIViewController+LoadingScreen.swift */; };
 		096653E523017AA900D833E8 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096653E423017AA900D833E8 /* UIViewController+Alert.swift */; };
@@ -33,6 +34,9 @@
 		09C8092722F03BE20003674B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092622F03BE20003674B /* RealmManager.swift */; };
 		09D1B3F723087B0D00B4A308 /* APIUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1B3F623087B0D00B4A308 /* APIUsers.swift */; };
 		09D1B3FA2308884400B4A308 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1B3F92308884400B4A308 /* MainTabBarController.swift */; };
+		09DE2944230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2943230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift */; };
+		09DE2946230B162300239AE5 /* AddNewFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2945230B162200239AE5 /* AddNewFeedViewController.swift */; };
+		09DE2948230B1DA700239AE5 /* UITextView+SetBottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2947230B1DA700239AE5 /* UITextView+SetBottomBorder.swift */; };
 		09E78E8022EECD9B005F5390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E7F22EECD9B005F5390 /* AppDelegate.swift */; };
 		09E78E8222EECD9B005F5390 /* FirstLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E8122EECD9B005F5390 /* FirstLoginViewController.swift */; };
 		09E78E8522EECD9B005F5390 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E78E8322EECD9B005F5390 /* Main.storyboard */; };
@@ -47,6 +51,7 @@
 		0915A42922FC1DFC002536CF /* NewUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserController.swift; sourceTree = "<group>"; };
 		094006D02302F291008076C0 /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		094006D32306D294008076C0 /* AddNewUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserService.swift; sourceTree = "<group>"; };
+		094ED0FC230C9A9500B43274 /* UserSendNewRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSendNewRequestService.swift; sourceTree = "<group>"; };
 		096653E0230151F000D833E8 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		096653E2230175C500D833E8 /* UIViewController+LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingScreen.swift"; sourceTree = "<group>"; };
 		096653E423017AA900D833E8 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
@@ -70,6 +75,9 @@
 		09C8092622F03BE20003674B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		09D1B3F623087B0D00B4A308 /* APIUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUsers.swift; sourceTree = "<group>"; };
 		09D1B3F92308884400B4A308 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		09DE2943230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedNewRequestViewController.swift; sourceTree = "<group>"; };
+		09DE2945230B162200239AE5 /* AddNewFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFeedViewController.swift; sourceTree = "<group>"; };
+		09DE2947230B1DA700239AE5 /* UITextView+SetBottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+SetBottomBorder.swift"; sourceTree = "<group>"; };
 		09E78E7C22EECD9B005F5390 /* MojGrad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MojGrad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E78E7F22EECD9B005F5390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09E78E8122EECD9B005F5390 /* FirstLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoginViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +109,7 @@
 			children = (
 				09E78E9722EF017D005F5390 /* UIButtonWithGradient.swift */,
 				09755D7922F2C2F000D90957 /* UITextField+SetBottomBorder.swift */,
+				09DE2947230B1DA700239AE5 /* UITextView+SetBottomBorder.swift */,
 				096653E2230175C500D833E8 /* UIViewController+LoadingScreen.swift */,
 				096653E423017AA900D833E8 /* UIViewController+Alert.swift */,
 				099D20D622FDC4B500E25894 /* MD5Coding.swift */,
@@ -207,6 +216,7 @@
 				096653E0230151F000D833E8 /* LoginService.swift */,
 				094006D32306D294008076C0 /* AddNewUserService.swift */,
 				09D1B3F623087B0D00B4A308 /* APIUsers.swift */,
+				094ED0FC230C9A9500B43274 /* UserSendNewRequestService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -223,6 +233,8 @@
 				096653E62301870F00D833E8 /* UserNewsFeedViewController.swift */,
 				096653E82301A68400D833E8 /* AdminNewsFeedViewController.swift */,
 				09D1B3F92308884400B4A308 /* MainTabBarController.swift */,
+				09DE2943230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift */,
+				09DE2945230B162200239AE5 /* AddNewFeedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -256,6 +268,7 @@
 				09E78E7922EECD9B005F5390 /* Frameworks */,
 				09E78E7A22EECD9B005F5390 /* Resources */,
 				163E35E02E8FF8EA4C307850 /* [CP] Embed Pods Frameworks */,
+				F7BCCC9D2226B6F408A40F6E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -360,6 +373,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F7BCCC9D2226B6F408A40F6E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MojGrad/Pods-MojGrad-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MojGrad/Pods-MojGrad-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MojGrad/Pods-MojGrad-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -370,11 +400,15 @@
 				096653E1230151F000D833E8 /* LoginService.swift in Sources */,
 				096653E3230175C500D833E8 /* UIViewController+LoadingScreen.swift in Sources */,
 				09C8092522F039CE0003674B /* News.swift in Sources */,
+				09DE2946230B162300239AE5 /* AddNewFeedViewController.swift in Sources */,
+				094ED0FD230C9A9500B43274 /* UserSendNewRequestService.swift in Sources */,
 				09B9BA8022FB44FE004FFA1F /* UsersViewController.swift in Sources */,
+				09DE2944230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift in Sources */,
 				09E78E9622EEE793005F5390 /* RegistrationViewController.swift in Sources */,
 				09E78E9822EF017D005F5390 /* UIButtonWithGradient.swift in Sources */,
 				09D1B3FA2308884400B4A308 /* MainTabBarController.swift in Sources */,
 				096653E92301A68400D833E8 /* AdminNewsFeedViewController.swift in Sources */,
+				09DE2948230B1DA700239AE5 /* UITextView+SetBottomBorder.swift in Sources */,
 				094006D12302F291008076C0 /* RegistrationModel.swift in Sources */,
 				09E78E8222EECD9B005F5390 /* FirstLoginViewController.swift in Sources */,
 				09C8092122F01CB30003674B /* LoginViewController.swift in Sources */,
@@ -538,7 +572,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7469ZTA6YS;
 				INFOPLIST_FILE = MojGrad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,7 +595,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7469ZTA6YS;
 				INFOPLIST_FILE = MojGrad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
