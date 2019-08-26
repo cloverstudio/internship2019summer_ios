@@ -13,13 +13,13 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if UserDefaults.standard.bool(forKey: Keys.rememberMe) {
-            if UserDefaults.standard.integer(forKey: Keys.personRoleId) == 1 {
+        //if UserDefaults.standard.bool(forKey: Keys.rememberMe) {
+            if UserDefaults.standard.integer(forKey: Keys.personRoleId) == 2 {
                 hideTabBarWithIndex(2)
-            } else if UserDefaults.standard.integer(forKey: Keys.personRoleId) == 2 {
+            } else if UserDefaults.standard.integer(forKey: Keys.personRoleId) == 1 {
             }
-        } else if UserDefaults.standard.bool(forKey: Keys.rememberMe) == false{
-        }
+//        } else if UserDefaults.standard.bool(forKey: Keys.rememberMe) == false{
+//        }
     }
     
     func hideTabBarWithIndex(_ index: Int) {

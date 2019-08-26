@@ -19,7 +19,6 @@ class UsersViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +31,16 @@ class UsersViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.downlaodDataFromService), name: Notification.Name(NewUserController.CONSTANT_REFRESH_USERS), object: nil)
         
+        
+    }
+    @IBAction func createNewUserBtn(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "NewUser", bundle: nil)
+        let destination = storyboard.instantiateViewController(withIdentifier: "NewUser") as! NewUserController
+        navigationController?.pushViewController(destination, animated: true)
+    }
+    
+    @objc func downlaodDataFromService() {
+        downlaodDataFromService(searchWord: nil)
     }
     
     @objc func downlaodDataFromService(searchWord: String? = nil) {
@@ -56,11 +65,22 @@ extension UsersViewController: UITableViewDelegate,UITableViewDataSource {
         let user = allUsers[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "korisnikCell") as! UserCell
         
-//            cell.korisnikImage.image = korisnik.korisnikImage
+        //cell.korisnikImage.image = korisnik.korisnikImage
         cell.imeKorisnika.text = user["firstName"].string
         cell.emailKorisnika.text = user["email"].string
+        cell.userId = user["ID"].int
 
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? UserCell else {
+            return
+        }
+        
+        let storyboard = UIStoryboard(name: "NewUser", bundle: nil)
+        let destination = storyboard.instantiateViewController(withIdentifier: "ChangeUserData") as! ChangeUserDataViewController
+        destination.userId = cell.userId
+        navigationController?.pushViewController(destination, animated: true)
     }
 }
 

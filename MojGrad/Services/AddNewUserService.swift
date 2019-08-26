@@ -15,7 +15,7 @@ class AddNewUserService {
     
     let token : [String:String] = ["token" : UserDefaults.standard.string(forKey: Keys.jasonWebToken) ?? ""] 
     
-    func sendUserData (parameters: [String : String], completion: @escaping newUserService) {
+    func sendUserData (parameters: [String : Any], completion: @escaping newUserService) {
         guard let newUserUrl = URL(string: "https://intern2019dev.clover.studio/users/newUser") else {
             completion(nil)
             return

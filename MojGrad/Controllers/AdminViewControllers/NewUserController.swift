@@ -21,19 +21,17 @@ class NewUserController: UIViewController {
     @IBOutlet weak var passField: UITextField!
     //Button funcionality
     @IBOutlet weak var showPassButton: UIButton!
-    @IBOutlet weak var createUserButton: UIButton!
+    @IBOutlet weak var addNewUser: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        usernameField.setBottomBorder()
-        oibField.setBottomBorder()
-        emailField.setBottomBorder()
-        passField.setBottomBorder()
+        setBordersForFields()
         
         passField.isSecureTextEntry = true
         
-        createUserButton.isEnabled = true
+        addNewUser.isEnabled = true
         
     }
     
@@ -43,6 +41,12 @@ class NewUserController: UIViewController {
         newProfileImageButton.layer.cornerRadius = newProfileImageButton.frame.size.width/2
     }
     
+    func setBordersForFields() {
+        usernameField.setBottomBorder()
+        oibField.setBottomBorder()
+        emailField.setBottomBorder()
+        passField.setBottomBorder()
+    }
     
     @IBAction func showPassIconTapped(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
@@ -53,8 +57,7 @@ class NewUserController: UIViewController {
             passField.isSecureTextEntry = true
         }
     }
-    
-    @IBAction func addNewUserButtonTapped(_ sender: UIButton) {
+    @IBAction func addNewUser(_ sender: UIButton) {
         guard let userName = usernameField.text else { return }
         guard let oib = oibField.text else { return }
         guard let email = emailField.text else { return }
@@ -69,10 +72,11 @@ class NewUserController: UIViewController {
                 self.showAlert(withTitle: "Error!", withMessage: "Server down!")
                 return
             }
-            if let _ = data["data"]["user"]["email"].string {
+            if let _ = data["data"]["user"]["id"].int {
                 let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
-                    self.navigationController?.popViewController(animated: true)
                     NotificationCenter.default.post(name: Notification.Name(NewUserController.CONSTANT_REFRESH_USERS), object: nil)
+                    self.navigationController?.popViewController(animated: true)
+                    
                 })
                 self.showAlert(withTitle: "Super", withMessage: "Korisnik uspješno kreiran", okAction: ok)
             }
@@ -83,3 +87,5 @@ class NewUserController: UIViewController {
         }
     }
 }
+    
+

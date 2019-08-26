@@ -18,24 +18,25 @@
 		096653E92301A68400D833E8 /* AdminNewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096653E82301A68400D833E8 /* AdminNewsFeedViewController.swift */; };
 		09755D7A22F2C2F000D90957 /* UITextField+SetBottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09755D7922F2C2F000D90957 /* UITextField+SetBottomBorder.swift */; };
 		09755D7C22F3375500D90957 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09755D7B22F3375500D90957 /* Keys.swift */; };
+		0976561723102F77009E0B1F /* UserRequestsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976561623102F77009E0B1F /* UserRequestsService.swift */; };
+		0976561A2312F519009E0B1F /* UserRequestNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097656192312F519009E0B1F /* UserRequestNavigationController.swift */; };
 		099D20D722FDC4B500E25894 /* MD5Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099D20D622FDC4B500E25894 /* MD5Coding.swift */; };
 		099D20D922FDD59000E25894 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099D20D822FDD59000E25894 /* RegistrationService.swift */; };
-		09B9BA6722F9DC9B004FFA1F /* UserNewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6622F9DC9B004FFA1F /* UserNewsFeed.storyboard */; };
-		09B9BA6922F9DDD5004FFA1F /* Requests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6822F9DDD5004FFA1F /* Requests.storyboard */; };
-		09B9BA6B22F9DEC3004FFA1F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6A22F9DEC3004FFA1F /* Profile.storyboard */; };
 		09B9BA6E22F9E0C0004FFA1F /* NewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6D22F9E0C0004FFA1F /* NewsFeed.storyboard */; };
-		09B9BA7022F9E13C004FFA1F /* AdminRequests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6F22F9E13C004FFA1F /* AdminRequests.storyboard */; };
+		09B9BA7022F9E13C004FFA1F /* UserRequests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA6F22F9E13C004FFA1F /* UserRequests.storyboard */; };
 		09B9BA7222F9E1A5004FFA1F /* NewUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA7122F9E1A5004FFA1F /* NewUser.storyboard */; };
 		09B9BA7422F9E204004FFA1F /* AdminProfle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B9BA7322F9E204004FFA1F /* AdminProfle.storyboard */; };
 		09B9BA8022FB44FE004FFA1F /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9BA7F22FB44FE004FFA1F /* UsersViewController.swift */; };
 		09B9BA8222FB45F2004FFA1F /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9BA8122FB45F2004FFA1F /* UserCell.swift */; };
+		09C43044230FE929007F2BF6 /* UserRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C43043230FE929007F2BF6 /* UserRequests.swift */; };
+		09C43046230FE9A1007F2BF6 /* UserRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C43045230FE9A1007F2BF6 /* UserRequestViewController.swift */; };
 		09C8092122F01CB30003674B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092022F01CB30003674B /* LoginViewController.swift */; };
 		09C8092522F039CE0003674B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092422F039CE0003674B /* News.swift */; };
 		09C8092722F03BE20003674B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092622F03BE20003674B /* RealmManager.swift */; };
 		09D1B3F723087B0D00B4A308 /* APIUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1B3F623087B0D00B4A308 /* APIUsers.swift */; };
 		09D1B3FA2308884400B4A308 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1B3F92308884400B4A308 /* MainTabBarController.swift */; };
 		09DE2944230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2943230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift */; };
-		09DE2946230B162300239AE5 /* AddNewFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2945230B162200239AE5 /* AddNewFeedViewController.swift */; };
+		09DE2946230B162300239AE5 /* NewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2945230B162200239AE5 /* NewRequestViewController.swift */; };
 		09DE2948230B1DA700239AE5 /* UITextView+SetBottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2947230B1DA700239AE5 /* UITextView+SetBottomBorder.swift */; };
 		09E78E8022EECD9B005F5390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E7F22EECD9B005F5390 /* AppDelegate.swift */; };
 		09E78E8222EECD9B005F5390 /* FirstLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E8122EECD9B005F5390 /* FirstLoginViewController.swift */; };
@@ -44,6 +45,7 @@
 		09E78E8A22EECD9B005F5390 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E78E8822EECD9B005F5390 /* LaunchScreen.storyboard */; };
 		09E78E9622EEE793005F5390 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E9522EEE793005F5390 /* RegistrationViewController.swift */; };
 		09E78E9822EF017D005F5390 /* UIButtonWithGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E78E9722EF017D005F5390 /* UIButtonWithGradient.swift */; };
+		09EF1821230E97DE008C080F /* ChangeUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1820230E97DE008C080F /* ChangeUserDataViewController.swift */; };
 		EDE916605C9887DCFC2FF0F9 /* Pods_MojGrad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFF5B0E76527D2EF3467D3F /* Pods_MojGrad.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,24 +61,25 @@
 		096653E82301A68400D833E8 /* AdminNewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminNewsFeedViewController.swift; sourceTree = "<group>"; };
 		09755D7922F2C2F000D90957 /* UITextField+SetBottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SetBottomBorder.swift"; sourceTree = "<group>"; };
 		09755D7B22F3375500D90957 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		0976561623102F77009E0B1F /* UserRequestsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestsService.swift; sourceTree = "<group>"; };
+		097656192312F519009E0B1F /* UserRequestNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestNavigationController.swift; sourceTree = "<group>"; };
 		099D20D622FDC4B500E25894 /* MD5Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5Coding.swift; sourceTree = "<group>"; };
 		099D20D822FDD59000E25894 /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
-		09B9BA6622F9DC9B004FFA1F /* UserNewsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserNewsFeed.storyboard; sourceTree = "<group>"; };
-		09B9BA6822F9DDD5004FFA1F /* Requests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Requests.storyboard; sourceTree = "<group>"; };
-		09B9BA6A22F9DEC3004FFA1F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		09B9BA6D22F9E0C0004FFA1F /* NewsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsFeed.storyboard; sourceTree = "<group>"; };
-		09B9BA6F22F9E13C004FFA1F /* AdminRequests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdminRequests.storyboard; sourceTree = "<group>"; };
+		09B9BA6F22F9E13C004FFA1F /* UserRequests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserRequests.storyboard; sourceTree = "<group>"; };
 		09B9BA7122F9E1A5004FFA1F /* NewUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewUser.storyboard; sourceTree = "<group>"; };
 		09B9BA7322F9E204004FFA1F /* AdminProfle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdminProfle.storyboard; sourceTree = "<group>"; };
 		09B9BA7F22FB44FE004FFA1F /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		09B9BA8122FB45F2004FFA1F /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		09C43043230FE929007F2BF6 /* UserRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequests.swift; sourceTree = "<group>"; };
+		09C43045230FE9A1007F2BF6 /* UserRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestViewController.swift; sourceTree = "<group>"; };
 		09C8092022F01CB30003674B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		09C8092422F039CE0003674B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		09C8092622F03BE20003674B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		09D1B3F623087B0D00B4A308 /* APIUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUsers.swift; sourceTree = "<group>"; };
 		09D1B3F92308884400B4A308 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		09DE2943230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedNewRequestViewController.swift; sourceTree = "<group>"; };
-		09DE2945230B162200239AE5 /* AddNewFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFeedViewController.swift; sourceTree = "<group>"; };
+		09DE2945230B162200239AE5 /* NewRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestViewController.swift; sourceTree = "<group>"; };
 		09DE2947230B1DA700239AE5 /* UITextView+SetBottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+SetBottomBorder.swift"; sourceTree = "<group>"; };
 		09E78E7C22EECD9B005F5390 /* MojGrad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MojGrad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E78E7F22EECD9B005F5390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 		09E78E8B22EECD9B005F5390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E78E9522EEE793005F5390 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		09E78E9722EF017D005F5390 /* UIButtonWithGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonWithGradient.swift; sourceTree = "<group>"; };
+		09EF1820230E97DE008C080F /* ChangeUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataViewController.swift; sourceTree = "<group>"; };
 		6BFF5B0E76527D2EF3467D3F /* Pods_MojGrad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MojGrad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD94260DA189955DF85243B /* Pods-MojGrad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MojGrad.debug.xcconfig"; path = "Target Support Files/Pods-MojGrad/Pods-MojGrad.debug.xcconfig"; sourceTree = "<group>"; };
 		8EE5526CD0C4C961211E6B14 /* Pods-MojGrad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MojGrad.release.xcconfig"; path = "Target Support Files/Pods-MojGrad/Pods-MojGrad.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,21 +121,11 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		09B9BA6322F9DAAB004FFA1F /* KorisnikStoryboards */ = {
-			isa = PBXGroup;
-			children = (
-				09B9BA6622F9DC9B004FFA1F /* UserNewsFeed.storyboard */,
-				09B9BA6822F9DDD5004FFA1F /* Requests.storyboard */,
-				09B9BA6A22F9DEC3004FFA1F /* Profile.storyboard */,
-			);
-			path = KorisnikStoryboards;
-			sourceTree = "<group>";
-		};
 		09B9BA6C22F9E080004FFA1F /* AdminStoryboards */ = {
 			isa = PBXGroup;
 			children = (
 				09B9BA6D22F9E0C0004FFA1F /* NewsFeed.storyboard */,
-				09B9BA6F22F9E13C004FFA1F /* AdminRequests.storyboard */,
+				09B9BA6F22F9E13C004FFA1F /* UserRequests.storyboard */,
 				09B9BA7122F9E1A5004FFA1F /* NewUser.storyboard */,
 				09B9BA7322F9E204004FFA1F /* AdminProfle.storyboard */,
 			);
@@ -142,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				09D1B3F82308854500B4A308 /* Cells */,
-				09B9BA6322F9DAAB004FFA1F /* KorisnikStoryboards */,
 				09B9BA6C22F9E080004FFA1F /* AdminStoryboards */,
 				09E78E8322EECD9B005F5390 /* Main.storyboard */,
 				09E78E8822EECD9B005F5390 /* LaunchScreen.storyboard */,
@@ -163,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				09B9BA8122FB45F2004FFA1F /* UserCell.swift */,
+				09C43043230FE929007F2BF6 /* UserRequests.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -217,6 +211,7 @@
 				094006D32306D294008076C0 /* AddNewUserService.swift */,
 				09D1B3F623087B0D00B4A308 /* APIUsers.swift */,
 				094ED0FC230C9A9500B43274 /* UserSendNewRequestService.swift */,
+				0976561623102F77009E0B1F /* UserRequestsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -224,19 +219,46 @@
 		09E78E9422EECDEE005F5390 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				09EF1822230E97E6008C080F /* LoginSignup */,
+				09EF1823230E9837008C080F /* UsersControllers */,
+				09EF1824230E9864008C080F /* AdminViewControllers */,
 				09E78E7F22EECD9B005F5390 /* AppDelegate.swift */,
-				09E78E8122EECD9B005F5390 /* FirstLoginViewController.swift */,
-				09C8092022F01CB30003674B /* LoginViewController.swift */,
-				09E78E9522EEE793005F5390 /* RegistrationViewController.swift */,
-				09B9BA7F22FB44FE004FFA1F /* UsersViewController.swift */,
-				0915A42922FC1DFC002536CF /* NewUserController.swift */,
-				096653E62301870F00D833E8 /* UserNewsFeedViewController.swift */,
-				096653E82301A68400D833E8 /* AdminNewsFeedViewController.swift */,
 				09D1B3F92308884400B4A308 /* MainTabBarController.swift */,
-				09DE2943230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift */,
-				09DE2945230B162200239AE5 /* AddNewFeedViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		09EF1822230E97E6008C080F /* LoginSignup */ = {
+			isa = PBXGroup;
+			children = (
+				09E78E8122EECD9B005F5390 /* FirstLoginViewController.swift */,
+				09E78E9522EEE793005F5390 /* RegistrationViewController.swift */,
+				09C8092022F01CB30003674B /* LoginViewController.swift */,
+			);
+			path = LoginSignup;
+			sourceTree = "<group>";
+		};
+		09EF1823230E9837008C080F /* UsersControllers */ = {
+			isa = PBXGroup;
+			children = (
+				096653E62301870F00D833E8 /* UserNewsFeedViewController.swift */,
+				09DE2943230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift */,
+				097656192312F519009E0B1F /* UserRequestNavigationController.swift */,
+				09C43045230FE9A1007F2BF6 /* UserRequestViewController.swift */,
+				09DE2945230B162200239AE5 /* NewRequestViewController.swift */,
+			);
+			path = UsersControllers;
+			sourceTree = "<group>";
+		};
+		09EF1824230E9864008C080F /* AdminViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				096653E82301A68400D833E8 /* AdminNewsFeedViewController.swift */,
+				09B9BA7F22FB44FE004FFA1F /* UsersViewController.swift */,
+				0915A42922FC1DFC002536CF /* NewUserController.swift */,
+				09EF1820230E97DE008C080F /* ChangeUserDataViewController.swift */,
+			);
+			path = AdminViewControllers;
 			sourceTree = "<group>";
 		};
 		97A682D45BD4820BB70D1D5D /* Pods */ = {
@@ -320,13 +342,10 @@
 			files = (
 				09E78E8A22EECD9B005F5390 /* LaunchScreen.storyboard in Resources */,
 				09B9BA6E22F9E0C0004FFA1F /* NewsFeed.storyboard in Resources */,
-				09B9BA6922F9DDD5004FFA1F /* Requests.storyboard in Resources */,
 				09B9BA7222F9E1A5004FFA1F /* NewUser.storyboard in Resources */,
-				09B9BA6B22F9DEC3004FFA1F /* Profile.storyboard in Resources */,
 				09E78E8722EECD9B005F5390 /* Assets.xcassets in Resources */,
 				09B9BA7422F9E204004FFA1F /* AdminProfle.storyboard in Resources */,
-				09B9BA7022F9E13C004FFA1F /* AdminRequests.storyboard in Resources */,
-				09B9BA6722F9DC9B004FFA1F /* UserNewsFeed.storyboard in Resources */,
+				09B9BA7022F9E13C004FFA1F /* UserRequests.storyboard in Resources */,
 				09E78E8522EECD9B005F5390 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,10 +416,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0976561723102F77009E0B1F /* UserRequestsService.swift in Sources */,
+				09C43046230FE9A1007F2BF6 /* UserRequestViewController.swift in Sources */,
+				09EF1821230E97DE008C080F /* ChangeUserDataViewController.swift in Sources */,
 				096653E1230151F000D833E8 /* LoginService.swift in Sources */,
 				096653E3230175C500D833E8 /* UIViewController+LoadingScreen.swift in Sources */,
 				09C8092522F039CE0003674B /* News.swift in Sources */,
-				09DE2946230B162300239AE5 /* AddNewFeedViewController.swift in Sources */,
+				09C43044230FE929007F2BF6 /* UserRequests.swift in Sources */,
+				09DE2946230B162300239AE5 /* NewRequestViewController.swift in Sources */,
 				094ED0FD230C9A9500B43274 /* UserSendNewRequestService.swift in Sources */,
 				09B9BA8022FB44FE004FFA1F /* UsersViewController.swift in Sources */,
 				09DE2944230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift in Sources */,
@@ -421,6 +444,7 @@
 				09755D7C22F3375500D90957 /* Keys.swift in Sources */,
 				099D20D722FDC4B500E25894 /* MD5Coding.swift in Sources */,
 				096653E523017AA900D833E8 /* UIViewController+Alert.swift in Sources */,
+				0976561A2312F519009E0B1F /* UserRequestNavigationController.swift in Sources */,
 				09755D7A22F2C2F000D90957 /* UITextField+SetBottomBorder.swift in Sources */,
 				09B9BA8222FB45F2004FFA1F /* UserCell.swift in Sources */,
 				094006D42306D294008076C0 /* AddNewUserService.swift in Sources */,
@@ -574,7 +598,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7469ZTA6YS;
 				INFOPLIST_FILE = MojGrad/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -597,7 +621,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7469ZTA6YS;
 				INFOPLIST_FILE = MojGrad/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

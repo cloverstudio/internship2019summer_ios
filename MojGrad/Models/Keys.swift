@@ -16,4 +16,6 @@ struct Keys {
     static let rememberMe = "rememberMe"
     static let jasonWebToken = "jasonWebToken"
     static let personRoleId = "personRoleId"
+    static let requestSent = "requestSent"
+    static let userId = "userId"
 }

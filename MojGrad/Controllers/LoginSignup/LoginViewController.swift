@@ -138,9 +138,8 @@ class LoginViewController: UIViewController {
                 let personRoleId = data["data"]["user"]["personsRoleId"].intValue
                 UserDefaults.standard.set(jwt, forKey: Keys.jasonWebToken)
                 UserDefaults.standard.set(personRoleId, forKey: Keys.personRoleId)
-                if personRoleId == 1{
-                    self.performSegue(withIdentifier: "Admin", sender: nil)
-                }
+                self.performSegue(withIdentifier: "Admin", sender: nil)
+
             }
             else if let _ = data["data"]["error"]["error_code"].string {
                 let errDescription = data["data"]["error"]["error_description"].stringValue
@@ -149,6 +148,7 @@ class LoginViewController: UIViewController {
                 
             }
         }
+        removeSpinner()
     }
     
     func isValidEmail(emailID:String) -> Bool {

@@ -54,8 +54,25 @@ class NewRequestViewController: UIViewController {
             
             let param : [String : Any] = ["Title" : title, "Request_type" : typeRequest, "location_latitude" : latitude, "location_longitude" : longitude, "message" : message]
             
-            self.newRequest.sendData(parameters: param)
+            self.newRequest.sendData(parameters: param) { jsonData in
+                guard let _ = jsonData else {
+                    self.showAlert(withTitle: "Error", withMessage: "Server down!")
+                    return
+                } 
+                let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
+                    NotificationCenter.default.post(name: Notification.Name(NewUserController.CONSTANT_REFRESH_USERS), object: nil)
+//                    self.navigationController?.popViewController(animated: true)
+//                    self.performSegue(withIdentifier: "UserRequests", sender: nil)
+                    
+                })
+                self.showAlert(withTitle: "Super", withMessage: "Zahtjev uspješno kreiran", okAction: ok)
+            }
         }
+        UserDefaults.standard.set(true, forKey: Keys.requestSent)
+        
+        let storyboard = UIStoryboard.init(name: "UserRequests", bundle: nil)
+        let destination = storyboard.instantiateViewController(withIdentifier: "UserRequests")
+        navigationController?.pushViewController(destination, animated: true)
     }
 
     typealias GetLatLong = ([Double]) -> Void
