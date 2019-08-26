@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-// TODO: SUBCLASS NAMING CONVENTIONS DICTATE: THIS SHOLD BE NAMED SOMETHING LIKE UIButtonWithGradient etc.
+// TODO: THE CLASS NAME COULD SOUNDS LIKE A FUNCTION
 @IBDesignable
 class SetUpGradient: UIButton {
     

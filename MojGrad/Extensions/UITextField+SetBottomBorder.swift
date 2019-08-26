@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-// TODO: NAME THE EXTENSION ACCORDING TO WHAT THEY DO e.g.: UITextField+setBottomBorder
+
 extension UITextField {
     
     func setBottomBorder() {

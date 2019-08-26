@@ -46,7 +46,7 @@ class UsersViewController: UIViewController {
         }
     }
 }
-
+// TODO: Vedran - USING CLASS EXTENSION TO ADOPT PROTOCOLS LIKE THIS IS NICE, GOOD JOB
 extension UsersViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allUsers.count
