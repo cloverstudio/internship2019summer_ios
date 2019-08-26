@@ -7,8 +7,8 @@
 //
 
 import UIKit
-// TODO: SHOULD BE FirstLoginViewController
-class FirstLogin: UIViewController {
+
+class FirstLoginViewController: UIViewController {
     
     let defaults = UserDefaults.standard
     

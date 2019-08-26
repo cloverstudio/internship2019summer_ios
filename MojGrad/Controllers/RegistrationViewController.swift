@@ -7,21 +7,28 @@
 //
 
 import UIKit
-// TODO: RegistrationViewController or RegistrationVC TO BE MORE DESCRIPTIVE
-class Registration: UIViewController {
-    // TODO: THIS WOULD BE DONE BETTER AS CALCULATED VARIABLE, UNLESS YOU ARE AIMING FOR DEPENDENCY INJECTION, THEN IT SHOULD BE AN ASIGNABLE VARIABLE e.g. var defaults: UserDefaults!. Then assign to this during view controller inflation, or in viewDidLoad (if not using any DI).
-    let defaults = UserDefaults.standard
-    // TODO: didSet IN NEXT ROW
-    var oibFieldCheck = false { didSet {
-        correctInputs = oibFieldCheck && emailFieldCheck && passFieldCheck
+import Alamofire
+import SwiftyJSON
+
+class RegistrationViewController: UIViewController {
+
+    var registrationService = RegistrationService()
+    
+    var reg = RegData()
+    
+    var oibFieldCheck = false {
+        didSet {
+            correctInputs = oibFieldCheck && emailFieldCheck && passFieldCheck
         }
     }
-    var emailFieldCheck = false { didSet {
-        correctInputs = oibFieldCheck && emailFieldCheck && passFieldCheck
+    var emailFieldCheck = false {
+        didSet {
+            correctInputs = oibFieldCheck && emailFieldCheck && passFieldCheck
         }
     }
-    var passFieldCheck = false { didSet {
-        correctInputs = oibFieldCheck && emailFieldCheck && passFieldCheck
+    var passFieldCheck = false {
+        didSet {
+            correctInputs = oibFieldCheck && emailFieldCheck && passFieldCheck
         }
     }
     
@@ -79,13 +86,52 @@ class Registration: UIViewController {
         oibField.addTarget(self, action: #selector(checkOib), for: .editingChanged)
         emailField.addTarget(self, action: #selector(checkEmail), for: .editingChanged)
         passField.addTarget(self, action: #selector(checkPass), for: .editingChanged)
-    
-        checkForUserData()
+        
     }
+    
+
     
     @IBAction func registrationButtonTapped(_ sender: Any) {
-        saveUserData()
+        guard let oib = oibField.text else {
+            return
+        }
+        guard let email = emailField.text else {
+            return
+        }
+        guard let pass = passField.text else {
+            return
+        }
+        
+        let md5Pass = pass.md5Value
+        
+        let param : [String : String] = ["oib" : oib, "email" : email, "password" : md5Pass]
+        
+        self.showSpinner(onView: self.view)
+        
+        registrationService.sendData(parameters: param) { regJSON  in
+            guard let data = regJSON else {
+                DispatchQueue.main.async {
+                    self.showAlert(withTitle: "Error!", withMessage: "Server down!")
+                }
+                return
+            }
+            
+            if let jwt = data["data"]["user"]["jwt"].string {
+                let personRoleId = data["data"]["user"]["personsRoleId"].intValue
+                UserDefaults.standard.set(jwt, forKey: Keys.jasonWebToken)
+                UserDefaults.standard.set(personRoleId, forKey: Keys.personRoleId)
+                self.performSegue(withIdentifier: "Users", sender: nil)
+                
+            }
+            else if let _ = data["data"]["error"]["error_code"].string {
+                let errDescription = data["data"]["error"]["error_description"].stringValue
+                self.showAlert(withTitle: "Error!", withMessage: errDescription)
+                self.removeSpinner()
+                
+            }
+        }
     }
+
     
     @IBAction func passIconTapped(_ sender: UIButton) {
         
@@ -97,17 +143,21 @@ class Registration: UIViewController {
             passField.isSecureTextEntry = true
         }
     }
+    
     @IBAction func rememberMeButtonTapped(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         if sender.isSelected {
             rememberMeLabel.text = "Zaboravi me"
             checkmarkImage.image = UIImage(named: "remember_me_x_icon")
+            UserDefaults.standard.set(true, forKey: Keys.rememberMe)
+            
         } else {
             rememberMeLabel.text = "Zapamti me"
             checkmarkImage.image = UIImage(named: "remember_me_checkmark_icon")
+            UserDefaults.standard.set(false, forKey: Keys.rememberMe)
+            
         }
     }
-    
     
     func isValidEmail(emailID:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
@@ -147,26 +197,6 @@ class Registration: UIViewController {
             validPassLabel.isHidden = true
             passFieldCheck = true
         }
-        
-    }
-    
-    func saveUserData() {
-        defaults.set(oibField.text!, forKey: Keys.userOib)
-        defaults.set(emailField.text!, forKey: Keys.userEmail)
-        defaults.set(passField.text!, forKey: Keys.userPass)
-        defaults.set(true, forKey: Keys.userRegistered)
-        
-    }
-    
-    func checkForUserData() {
-        let oib = defaults.value(forKey: Keys.userOib) as? String ?? ""
-        oibField.text = oib
-
-        let email = defaults.value(forKey: Keys.userEmail) as? String ?? ""
-        emailField.text = email
-
-        let pass = defaults.value(forKey: Keys.userPass) as? String ?? ""
-        passField.text = pass
-        
     }
 }
+

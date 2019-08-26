@@ -10,26 +10,33 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    var emailFieldCheck = false { didSet {
-        allOK = emailFieldCheck && passFieldCheck
+    var emailFieldCheck = false {
+        didSet {
+            correctInputs = emailFieldCheck && passFieldCheck
         }
     }
-    var passFieldCheck = false { didSet {
-        allOK = emailFieldCheck && passFieldCheck
+    var passFieldCheck = false {
+        didSet {
+            correctInputs = emailFieldCheck && passFieldCheck
         }
     }
     
-    var allOK = false { didSet {
-        loginButton.isEnabled = allOK
-        if loginButton.isEnabled {
-            loginButton.alpha = 1
-        }
+    var correctInputs = false {
+        didSet {
+            loginButton.isEnabled = correctInputs
+            rememberMeButton.isEnabled = correctInputs
+            if loginButton.isEnabled && rememberMeButton.isEnabled {
+                loginButton.alpha = 1
+                rememberMeButton.alpha = 1
+                checkmarkImage.alpha = 1
+                rememberMeLabel.alpha = 1
+            }
         }
     }
-
     var isOn = false
-    let defaults = UserDefaults.standard
+    var log = RegData()
     var pass: String =  ""
+    var loginService = LoginService()
     
     @IBOutlet weak var logoView: UIImageView!
     @IBOutlet weak var infoLabel: UILabel!
@@ -75,8 +82,7 @@ class LoginViewController: UIViewController {
         
         emailField.addTarget(self, action: #selector(checkEmail), for: .editingChanged)
         passwordField.addTarget(self, action: #selector(checkPass), for: .editingChanged)
-
-        checkForData()
+        
     }
     
     @IBAction func passButtonTapped(_ sender: UIButton) {
@@ -96,14 +102,53 @@ class LoginViewController: UIViewController {
         if sender.isSelected {
             rememberMeLabel.text = "Zaboravi me"
             checkmarkImage.image = UIImage(named: "remember_me_x_icon")
+            UserDefaults.standard.set(true, forKey: Keys.rememberMe)
+            
         } else {
             rememberMeLabel.text = "Zapamti me"
             checkmarkImage.image = UIImage(named: "remember_me_checkmark_icon")
+            UserDefaults.standard.set(false, forKey: Keys.rememberMe)
+            
         }
     }
     
     
     @IBAction func logInButtonTapped(_ sender: UIButton) {
+        guard let email = emailField.text else {
+            return
+        }
+        guard let password = passwordField.text else {
+            return
+        }
+        
+        let md5Pass = password.md5Value
+        
+        let param : [String : String] = ["email" : email, "password" : md5Pass]
+        
+        self.showSpinner(onView: self.view)
+        
+        loginService.fetchData(parameters: param) { logJSON in
+            guard let data = logJSON else {
+                DispatchQueue.main.async {
+                    self.showAlert(withTitle: "Error!", withMessage: "Server down!")
+                }
+                return
+            }
+            if let jwt = data["data"]["user"]["jwt"].string {
+                let personRoleId = data["data"]["user"]["personsRoleId"].intValue
+                UserDefaults.standard.set(jwt, forKey: Keys.jasonWebToken)
+                UserDefaults.standard.set(personRoleId, forKey: Keys.personRoleId)
+                if personRoleId == 1{
+                    self.performSegue(withIdentifier: "Admin", sender: nil)
+                }
+            }
+            else if let _ = data["data"]["error"]["error_code"].string {
+                let errDescription = data["data"]["error"]["error_description"].stringValue
+                self.showAlert(withTitle: "Error!", withMessage: errDescription)
+                self.removeSpinner()
+                
+            }
+        }
     }
     
     func isValidEmail(emailID:String) -> Bool {
@@ -134,24 +179,5 @@ class LoginViewController: UIViewController {
             passFieldCheck = true
         }
     }
-    
-    func checkForData()  {
-        let email = defaults.string(forKey: Keys.userEmail) ?? ""
-        emailField.text = email
-        
-        let password = defaults.string(forKey: Keys.userPass) ?? ""
-        passwordField.text = password
-        
-        if passwordField.text != "" && emailField.text != "" {
-            loginButton.isEnabled = true
-            loginButton.alpha = 1
-            rememberMeButton.isEnabled = true
-            rememberMeButton.alpha = 1
-            checkmarkImage.alpha = 1
-            rememberMeLabel.alpha = 1
-        }
-    }
-    
-    
 }
 

@@ -10,18 +10,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Korisnici Controller-->
+        <!--Users View Controller-->
         <scene sceneID="mGR-fi-v6h">
             <objects>
-                <viewController id="RHH-7J-qBk" customClass="KorisniciController" customModule="MojGrad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RHH-7J-qBk" customClass="UsersViewController" customModule="MojGrad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Zd-yO-vQz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJf-td-X0L">
-                                <rect key="frame" x="348" y="108" width="46" height="50"/>
+                                <rect key="frame" x="349" y="108" width="45" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2Mm-un-CGC"/>
+                                    <constraint firstAttribute="width" constant="45" id="Slx-pS-B9B"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -32,7 +33,7 @@
                                 <rect key="frame" x="0.0" y="178" width="414" height="635"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="korisnikCell" rowHeight="80" id="3LO-An-uIy" customClass="KorisnikCell" customModule="MojGrad" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="korisnikCell" rowHeight="80" id="3LO-An-uIy" customClass="UserCell" customModule="MojGrad" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3LO-An-uIy" id="FzK-Zb-nZx">
@@ -77,6 +78,7 @@
                                                 <constraint firstItem="UQT-gG-jan" firstAttribute="top" secondItem="Ogc-9i-tqs" secondAttribute="bottom" constant="8.5" id="yEj-yO-9xD"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="5000" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="emailKorisnika" destination="UQT-gG-jan" id="Ffr-uY-Q6V"/>
                                             <outlet property="imeKorisnika" destination="Ogc-9i-tqs" id="cpg-KX-lK3"/>
@@ -86,7 +88,7 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="zFV-jJ-NL0">
-                                <rect key="frame" x="20" y="108" width="313" height="50"/>
+                                <rect key="frame" x="20" y="108" width="314" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8KK-IL-5az"/>
                                 </constraints>
@@ -240,6 +242,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addNewUserButtonTapped:" destination="4RD-0U-RFM" eventType="touchUpInside" id="qTd-Ik-8El"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_user_profile_icon" translatesAutoresizingMaskIntoConstraints="NO" id="7S1-kC-WVz">
                                 <rect key="frame" x="117" y="228" width="180" height="44"/>

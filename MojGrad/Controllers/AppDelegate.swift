@@ -8,6 +8,8 @@
 
 import UIKit
 import RealmSwift
+import GoogleMaps
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +20,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        if UserDefaults.standard.bool(forKey: Keys.userRegistered) {
+        IQKeyboardManager.shared.enable = true
+        
+        GMSServices.provideAPIKey("sAIzaSyBCJZPC-fvpqUfL-iV392Dr90dfTSptLqo")
+        
+        if UserDefaults.standard.bool(forKey: Keys.rememberMe) {
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            if UserDefaults.standard.integer(forKey: Keys.personRoleId) == 1 {
+                let vc = storyboard.instantiateViewController(withIdentifier: "UserTabBarController")
+                self.window?.rootViewController = vc
+            } else if UserDefaults.standard.integer(forKey: Keys.personRoleId) == 2 {
+                let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "AdminTabBarController")//AdminTabBarController
+                self.window?.rootViewController = vc
+            }
+        } else if UserDefaults.standard.bool(forKey: Keys.rememberMe) == false{
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
             self.window?.rootViewController = vc
