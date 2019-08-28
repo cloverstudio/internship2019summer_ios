@@ -22,6 +22,7 @@ class NewUserController: UIViewController {
     //Button funcionality
     @IBOutlet weak var showPassButton: UIButton!
     @IBOutlet weak var addNewUser: UIButton!
+    @IBOutlet weak var imageFromLibrary: UIImageView!
     
     
     override func viewDidLoad() {
@@ -32,13 +33,13 @@ class NewUserController: UIViewController {
         passField.isSecureTextEntry = true
         
         addNewUser.isEnabled = true
-        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         newProfileImageButton.layer.cornerRadius = newProfileImageButton.frame.size.width/2
+        imageFromLibrary.layer.cornerRadius = imageFromLibrary.frame.size.width/2
     }
     
     func setBordersForFields() {
@@ -46,6 +47,17 @@ class NewUserController: UIViewController {
         oibField.setBottomBorder()
         emailField.setBottomBorder()
         passField.setBottomBorder()
+    }
+    
+    @IBAction func addProfileImage(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            var imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+        
     }
     
     @IBAction func showPassIconTapped(_ sender: UIButton) {
@@ -65,9 +77,14 @@ class NewUserController: UIViewController {
         
         let md5Pass = password.md5Value
         
-        let userParam : [String : String] = ["userName" : userName, "firstName" : userName, "oib" : oib, "email" : email, "password" : md5Pass]
+        let firstName = userName.components(separatedBy: " ")[0] ?? ""
+        let lastName = userName.components(separatedBy: " ")[1]  ?? ""
         
-        newUser.sendUserData(parameters: userParam) { userJSON in
+        let data = imageFromLibrary.image?.jpegData(compressionQuality: 0.1)
+        
+        let userParam : [String : Any] = ["firstName" : firstName, "lastName" : lastName, "oib" : oib, "email" : email, "password" : md5Pass]
+        
+        newUser.sendUserData(parameters: userParam, imageData: data) { userJSON in
             guard let data = userJSON else {
                 self.showAlert(withTitle: "Error!", withMessage: "Server down!")
                 return
@@ -87,5 +104,15 @@ class NewUserController: UIViewController {
         }
     }
 }
-    
+
+extension NewUserController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        imageFromLibrary.image = image
+        dismiss(animated: true, completion: nil)
+        imageFromLibrary.alpha = 1.0
+        
+        
+    }
+}
 

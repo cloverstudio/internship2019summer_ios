@@ -13,16 +13,22 @@ import CoreLocation
 
 class UserRequestViewController: UIViewController {
     
+    var listOfItems : [String] = ["Sve", "Kvar", "Prijedlog"]
+    
     var allRequests = [JSON]()
     var requestData = UserRequestService()
     let regionInMeters : Double = 500
     var request = UserRequests()
-
-    @IBOutlet weak var choseRequest: UIButton!
+    var requestType : String?
+    
+    @IBOutlet weak var typeOfRequestTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createRequestPicker()
+        createToolbar()
         
         downloadRequests()
         
@@ -40,13 +46,38 @@ class UserRequestViewController: UIViewController {
         navigationController?.pushViewController(destination, animated: true)
     }
     
+    func createRequestPicker() {
+        let requestPicker = UIPickerView()
+        requestPicker.delegate = self
+        typeOfRequestTextField.inputView = requestPicker
+        requestPicker.backgroundColor = #colorLiteral(red: 0.9058823529, green: 0.9058823529, blue: 0.9058823529, alpha: 1)
+    }
+    
+    func createToolbar() {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        toolBar.tintColor = #colorLiteral(red: 0, green: 0.462745098, blue: 1, alpha: 1)
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(NewRequestViewController.dismissKeyboard))
+        
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        typeOfRequestTextField.inputAccessoryView = toolBar
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+        downloadRequests(searchWord: requestType)
+    }
     
     @objc func downloadRequests() {
         downloadRequests(searchWord: nil)
     }
     
     @objc func downloadRequests(searchWord: String? = nil) {
-        requestData.fetchData(searchWord: searchWord) { dataJSON in
+        requestData.fetchData(searchWord: requestType) { dataJSON in
             guard let data = dataJSON else {
                 return
             }
@@ -54,7 +85,6 @@ class UserRequestViewController: UIViewController {
                 self.allRequests = users
                 self.tableView.reloadData()
             }
-            
         }
     }
     
@@ -118,9 +148,48 @@ extension UserRequestViewController: UITableViewDelegate, UITableViewDataSource 
         cell.typeOfRequest.text = "Tip: \(requestType!)"
         cell.messageRequest.text = request["message"].string
         let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-        //cell.mapView.setCenter(location, animated: true)
         cell.mapView.setRegion(region, animated: true)
         
         return cell
     }
 }
+
+extension UserRequestViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return listOfItems.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return listOfItems[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        typeOfRequestTextField.text = listOfItems[row]
+        
+        if typeOfRequestTextField.text != "Sve" {
+            requestType = typeOfRequestTextField.text
+        } else {
+            requestType = nil
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var label = UILabel()
+        
+        if let view = view as? UILabel {
+            label = view
+        } else {
+            label = UILabel()
+        }
+        
+        label.textColor = #colorLiteral(red: 0, green: 0.5558522344, blue: 1, alpha: 1)
+        label.textAlignment = .center
+        label.font = UIFont(name: "Avenir", size: 17)
+        
+        label.text = listOfItems[row]
+        
+        return label
+    }
+}
+

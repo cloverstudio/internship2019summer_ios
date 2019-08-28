@@ -86,8 +86,6 @@ extension UsersViewController: UITableViewDelegate,UITableViewDataSource {
 
 extension UsersViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-
         downlaodDataFromService(searchWord: searchText)
-        
     }
 }

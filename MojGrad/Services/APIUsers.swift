@@ -15,8 +15,8 @@ class APIUsers {
     
     let token : [String:String] = ["token" : UserDefaults.standard.string(forKey: Keys.jasonWebToken) ?? ""]
     
-    func fetchUsersData(searchWord: String? = nil, completion: @escaping usersDataService) {
-        let searchString = searchWord != nil ? "/" + searchWord! : ""
+    func fetchUsersData(searchWord: String? = nil , completion: @escaping usersDataService) {
+        let searchString = searchWord != nil ? "?findBy=" + searchWord! : ""
         guard let newUserUrl = URL(string: "https://intern2019dev.clover.studio/users/allUsers" + searchString) else {
             completion(nil)
             return

@@ -21,8 +21,8 @@ class NewRequestViewController: UIViewController {
     var newRequest = UserSendNewRequestService()
     
     @IBOutlet weak var titleText: UITextView!
-    @IBOutlet weak var dropDownBtn: UIButton!
-    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var typeOfRequestTextField: UITextField!
+    
     
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var mapView: MKMapView!
@@ -32,9 +32,9 @@ class NewRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pickerView.isHidden = true
-        pickerView.delegate = self
-
+        createRequestPicker()
+        createToolbar()
+        
         titleText.addBottomBorderWithColor(color: #colorLiteral(red: 0.9058823529, green: 0.9058823529, blue: 0.9058823529, alpha: 1), height: 3.0)
         messageTextView.addBottomBorderWithColor(color: #colorLiteral(red: 0.9058823529, green: 0.9058823529, blue: 0.9058823529, alpha: 1), height: 3.0)
         
@@ -44,7 +44,7 @@ class NewRequestViewController: UIViewController {
         
         guard let title = titleText.text else {return}
         guard let address = placeLabel.text else {return}
-        guard let typeRequest = dropDownBtn.titleLabel?.text else {return}
+        guard let typeRequest = typeOfRequestTextField.text else {return}
         guard let message = messageTextView.text else {return}
         
         getLongLat(address: address) { array in
@@ -93,25 +93,52 @@ class NewRequestViewController: UIViewController {
         }
     }
     
-    @IBAction func dropDownBtnClicked(_ sender: UIButton) {
-        if pickerView.isHidden {
-            animateToogle(toogle: true)
-        } else {
-            animateToogle(toogle: false)
-        }
+//    @IBAction func dropDownBtnClicked(_ sender: UIButton) {
+////        if pickerView.isHidden {
+////            animateToogle(toogle: true)
+////        } else {
+////            animateToogle(toogle: false)
+////        }
+//    }
+//    
+//    
+////    func animateToogle(toogle: Bool) {
+////        if toogle {
+////            UIView.animate(withDuration: 0.3) {
+////                self.pickerView.isHidden = false
+////            }
+////        } else {
+////            UIView.animate(withDuration: 0.3) {
+////                self.pickerView.isHidden = true
+////            }
+////        }
+////    }
+    
+    func createRequestPicker() {
+        let requestPicker = UIPickerView()
+        requestPicker.delegate = self
+        
+        typeOfRequestTextField.inputView = requestPicker
+        
+        requestPicker.backgroundColor = #colorLiteral(red: 0.9058823529, green: 0.9058823529, blue: 0.9058823529, alpha: 1)
     }
     
+    func createToolbar() {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        toolBar.tintColor = #colorLiteral(red: 0, green: 0.462745098, blue: 1, alpha: 1)
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(NewRequestViewController.dismissKeyboard))
+        
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        typeOfRequestTextField.inputAccessoryView = toolBar
+    }
     
-    func animateToogle(toogle: Bool) {
-        if toogle {
-            UIView.animate(withDuration: 0.3) {
-                self.pickerView.isHidden = false
-            }
-        } else {
-            UIView.animate(withDuration: 0.3) {
-                self.pickerView.isHidden = true
-            }
-        }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     func setUpLocationManager() {
@@ -177,8 +204,25 @@ extension NewRequestViewController: UIPickerViewDataSource, UIPickerViewDelegate
         return listOfItems[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        dropDownBtn.setTitle(listOfItems[row], for: .normal)
-        animateToogle(toogle: false)
+        typeOfRequestTextField.text = listOfItems[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var label = UILabel()
+        
+        if let view = view as? UILabel {
+            label = view
+        } else {
+            label = UILabel()
+        }
+        
+        label.textColor = #colorLiteral(red: 0, green: 0.5558522344, blue: 1, alpha: 1)
+        label.textAlignment = .center
+        label.font = UIFont(name: "Avenir", size: 17)
+        
+        label.text = listOfItems[row]
+        
+        return label
     }
 }
 
@@ -222,3 +266,4 @@ extension NewRequestViewController: MKMapViewDelegate {
         }
     }
 }
+

@@ -149,6 +149,9 @@
                                         <real key="value" value="90"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addProfileImage:" destination="4RD-0U-RFM" eventType="touchUpInside" id="nvD-7o-ENE"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ime i Prezime:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbR-46-k5E">
                                 <rect key="frame" x="20" y="416" width="194" height="20"/>
@@ -261,6 +264,13 @@
                                     <action selector="showPassIconTapped:" destination="4RD-0U-RFM" eventType="touchUpInside" id="zXJ-M5-ade"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ac6-1g-r2G">
+                                <rect key="frame" x="70.5" y="116" width="273" height="273"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="273" id="lI1-jq-5a3"/>
+                                    <constraint firstAttribute="width" constant="273" id="yJb-S4-9b2"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -279,7 +289,10 @@
                             <constraint firstItem="YKb-js-qmX" firstAttribute="top" secondItem="vAB-aZ-UlV" secondAttribute="bottom" constant="8" id="FcK-gE-aL9"/>
                             <constraint firstItem="l7h-UM-pC3" firstAttribute="leading" secondItem="EzY-Ks-k0G" secondAttribute="leading" constant="20" id="GdX-lX-oLR"/>
                             <constraint firstItem="tlQ-R0-xFl" firstAttribute="centerY" secondItem="AC8-2C-jQc" secondAttribute="centerY" id="Gk6-LH-GVZ"/>
+                            <constraint firstItem="ZbR-46-k5E" firstAttribute="top" secondItem="ac6-1g-r2G" secondAttribute="bottom" constant="27" id="NF0-pa-sb4"/>
                             <constraint firstItem="EzY-Ks-k0G" firstAttribute="trailing" secondItem="vAB-aZ-UlV" secondAttribute="trailing" constant="200" id="Nwv-n8-OMd"/>
+                            <constraint firstItem="ac6-1g-r2G" firstAttribute="centerX" secondItem="EzY-Ks-k0G" secondAttribute="centerX" id="OEJ-CF-V29"/>
+                            <constraint firstItem="ac6-1g-r2G" firstAttribute="top" secondItem="l7h-UM-pC3" secondAttribute="bottom" constant="32" id="OhW-XP-pmR"/>
                             <constraint firstItem="hnd-N7-cGE" firstAttribute="leading" secondItem="EzY-Ks-k0G" secondAttribute="leading" constant="20" id="VLj-bB-G86"/>
                             <constraint firstItem="EzY-Ks-k0G" firstAttribute="trailing" secondItem="l7h-UM-pC3" secondAttribute="trailing" constant="200" id="Vwp-PP-1vy"/>
                             <constraint firstItem="EzY-Ks-k0G" firstAttribute="trailing" secondItem="YKb-js-qmX" secondAttribute="trailing" constant="20" id="W6j-NR-e7e"/>
@@ -290,6 +303,7 @@
                             <constraint firstItem="7S1-kC-WVz" firstAttribute="centerX" secondItem="q5X-9w-R5P" secondAttribute="centerX" id="f5T-GL-n4D"/>
                             <constraint firstItem="hnd-N7-cGE" firstAttribute="top" relation="lessThanOrEqual" secondItem="YFw-wo-0Zx" secondAttribute="bottom" constant="22" id="fVq-Ne-IAg"/>
                             <constraint firstItem="EzY-Ks-k0G" firstAttribute="trailing" secondItem="AC8-2C-jQc" secondAttribute="trailing" constant="20" id="gKg-0y-7V6"/>
+                            <constraint firstItem="EzY-Ks-k0G" firstAttribute="trailing" secondItem="ac6-1g-r2G" secondAttribute="trailing" constant="70.5" id="gci-AG-aQk"/>
                             <constraint firstItem="AC8-2C-jQc" firstAttribute="leading" secondItem="EzY-Ks-k0G" secondAttribute="leading" constant="20" id="hH6-HM-P9t"/>
                             <constraint firstItem="EzY-Ks-k0G" firstAttribute="trailing" secondItem="nDh-yb-rww" secondAttribute="trailing" constant="97" id="hH7-tp-X4F"/>
                             <constraint firstItem="ZbR-46-k5E" firstAttribute="leading" secondItem="EzY-Ks-k0G" secondAttribute="leading" constant="20" id="i9C-bD-Kqs"/>
@@ -300,6 +314,7 @@
                             <constraint firstItem="EzY-Ks-k0G" firstAttribute="trailing" secondItem="YFw-wo-0Zx" secondAttribute="trailing" constant="20" id="lSh-IU-4yO"/>
                             <constraint firstItem="EzY-Ks-k0G" firstAttribute="trailing" secondItem="oXM-4J-4Pn" secondAttribute="trailing" constant="20" id="oA3-hh-vOZ"/>
                             <constraint firstItem="EzY-Ks-k0G" firstAttribute="trailing" secondItem="hnd-N7-cGE" secondAttribute="trailing" constant="200" id="ojU-qu-xNx"/>
+                            <constraint firstItem="ac6-1g-r2G" firstAttribute="leading" secondItem="EzY-Ks-k0G" secondAttribute="leading" constant="70.5" id="szm-ID-9fT"/>
                             <constraint firstItem="hTL-0e-a3y" firstAttribute="top" relation="lessThanOrEqual" secondItem="YKb-js-qmX" secondAttribute="bottom" constant="22" id="tZk-cg-db7"/>
                             <constraint firstItem="YFw-wo-0Zx" firstAttribute="leading" secondItem="EzY-Ks-k0G" secondAttribute="leading" constant="20" id="uqG-yJ-q3v"/>
                             <constraint firstItem="nDh-yb-rww" firstAttribute="top" relation="lessThanOrEqual" secondItem="AC8-2C-jQc" secondAttribute="bottom" constant="63" id="ylo-hJ-WKx"/>
@@ -310,6 +325,7 @@
                     <connections>
                         <outlet property="addNewUser" destination="nDh-yb-rww" id="Can-1g-ZnA"/>
                         <outlet property="emailField" destination="YKb-js-qmX" id="2CG-1s-vw2"/>
+                        <outlet property="imageFromLibrary" destination="ac6-1g-r2G" id="3Fz-n3-bXE"/>
                         <outlet property="newProfileImageButton" destination="q5X-9w-R5P" id="DkA-Ja-UzP"/>
                         <outlet property="oibField" destination="oXM-4J-4Pn" id="StJ-12-TSs"/>
                         <outlet property="passField" destination="AC8-2C-jQc" id="qUy-68-b4g"/>
@@ -319,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bz6-Xl-dPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3632" y="867"/>
+            <point key="canvasLocation" x="3631.884057971015" y="866.51785714285711"/>
         </scene>
         <!--Korisnici-->
         <scene sceneID="nWY-Jq-nEZ">
