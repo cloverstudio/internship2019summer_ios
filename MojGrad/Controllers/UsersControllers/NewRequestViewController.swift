@@ -61,8 +61,6 @@ class NewRequestViewController: UIViewController {
                 } 
                 let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
                     NotificationCenter.default.post(name: Notification.Name(NewUserController.CONSTANT_REFRESH_USERS), object: nil)
-//                    self.navigationController?.popViewController(animated: true)
-//                    self.performSegue(withIdentifier: "UserRequests", sender: nil)
                     let storyboard = UIStoryboard.init(name: "UserRequests", bundle: nil)
                     let destination = storyboard.instantiateViewController(withIdentifier: "UserRequests")
                     self.navigationController?.pushViewController(destination, animated: true)
@@ -72,8 +70,6 @@ class NewRequestViewController: UIViewController {
             }
         }
         UserDefaults.standard.set(true, forKey: Keys.requestSent)
-        
-
     }
 
     typealias GetLatLong = ([Double]) -> Void

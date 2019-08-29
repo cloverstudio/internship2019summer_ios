@@ -10,7 +10,7 @@ import UIKit
 
 class ChangeUserDataViewController: UIViewController {
     
-    var newUser = AddNewUserService()
+    var editUser = EditUserDataService()
     
     @IBOutlet weak var btnPicture: UIButton!
     @IBOutlet weak var userName: UITextField!
@@ -29,50 +29,44 @@ class ChangeUserDataViewController: UIViewController {
         
     }
     func checkUserFields() -> [String : Any] {
-        let user = userName.text ?? ""
+        let user : String? = userName.text
         let oib = userOib.text ?? ""
         let email = userEmail.text ?? ""
         let password = userPassword.text ?? ""
-        print(oib)
-        let id = userId ?? 0
         
-        let firstName = user.components(separatedBy: " ")[0] ?? ""
-        let lastName = user.components(separatedBy: " ")[1]  ?? ""
+        var firstName : String = ""
+        var lastName : String = ""
         
+        if user!.count > 0 {
+             firstName = user!.components(separatedBy: " ")[0]
+            if user!.count > 1 {
+                lastName = user!.components(separatedBy: " ")[1]
+            }
+        }
         let md5Pass = password.md5Value
         
-        let param : [String : Any] = ["firstName" : firstName, "lastName" : lastName, "oib" : oib, "email" : email, "password" : md5Pass, "id" : id]
+        let param : [String : Any] = ["firstName" : firstName, "lastName" : lastName, "oib" : oib, "email" : email, "password" : md5Pass]
         
-        //let parameters = param.compactMapValues { $0 }
-        
-        //param.filter { $0.value != nil }.mapValues { $0 }
-        
-        //print(param)
         return param
     }
     
     @IBAction func createUserBtn(_ sender: Any) {
         
         let param  = checkUserFields()
-
-        newUser.sendUserData(parameters: param) { userJSON in
-            guard let data = userJSON else {
+        print(param)
+        editUser.sendData(parameters: param, requestID: userId) { userJSON in
+            guard userJSON != nil else {
                 self.showAlert(withTitle: "Error!", withMessage: "Server down!")
                 return
             }
-            if let _ = data["data"]["user"]["email"].string {
-                //print(data["data"]["user"]["email"].string)
-                let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
-                   NotificationCenter.default.post(name: Notification.Name(NewUserController.CONSTANT_REFRESH_USERS), object: nil)
-                    self.navigationController?.popViewController(animated: true)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
+                NotificationCenter.default.post(name: Notification.Name(NewUserController.CONSTANT_REFRESH_USERS), object: nil)
+                let storyboard = UIStoryboard.init(name: "NewUser", bundle: nil)
+                let destination = storyboard.instantiateViewController(withIdentifier: "allUsers")
+                self.navigationController?.pushViewController(destination, animated: true)
 
                 })
                 self.showAlert(withTitle: "Super", withMessage: "Korisnik uspješno promijenjen", okAction: ok)
-            }
-            else if let _ = data["data"]["error"]["error_code"].string {
-                let errDescription = data["data"]["error"]["error_description"].stringValue
-                self.showAlert(withTitle: "Error!", withMessage: errDescription)
-            }
         }
     }
     @IBAction func showPassIconTapped(_ sender: UIButton) {

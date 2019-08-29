@@ -37,6 +37,7 @@
 		09D1B3FA2308884400B4A308 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1B3F92308884400B4A308 /* MainTabBarController.swift */; };
 		09D57AEA2316797E00DAF30F /* EditUserRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D57AE92316797E00DAF30F /* EditUserRequestViewController.swift */; };
 		09D57AEC2316EF6700DAF30F /* UserEditRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D57AEB2316EF6700DAF30F /* UserEditRequestService.swift */; };
+		09D57AF02317C52600DAF30F /* EditUserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D57AEF2317C52600DAF30F /* EditUserDataService.swift */; };
 		09DE2944230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2943230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift */; };
 		09DE2946230B162300239AE5 /* NewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2945230B162200239AE5 /* NewRequestViewController.swift */; };
 		09DE2948230B1DA700239AE5 /* UITextView+SetBottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2947230B1DA700239AE5 /* UITextView+SetBottomBorder.swift */; };
@@ -82,6 +83,7 @@
 		09D1B3F92308884400B4A308 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		09D57AE92316797E00DAF30F /* EditUserRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserRequestViewController.swift; sourceTree = "<group>"; };
 		09D57AEB2316EF6700DAF30F /* UserEditRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditRequestService.swift; sourceTree = "<group>"; };
+		09D57AEF2317C52600DAF30F /* EditUserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserDataService.swift; sourceTree = "<group>"; };
 		09DE2943230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedNewRequestViewController.swift; sourceTree = "<group>"; };
 		09DE2945230B162200239AE5 /* NewRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestViewController.swift; sourceTree = "<group>"; };
 		09DE2947230B1DA700239AE5 /* UITextView+SetBottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+SetBottomBorder.swift"; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				096653E0230151F000D833E8 /* LoginService.swift */,
 				094006D32306D294008076C0 /* AddNewUserService.swift */,
 				09D1B3F623087B0D00B4A308 /* APIUsers.swift */,
+				09D57AEF2317C52600DAF30F /* EditUserDataService.swift */,
 				094ED0FC230C9A9500B43274 /* UserSendNewRequestService.swift */,
 				0976561623102F77009E0B1F /* UserRequestsService.swift */,
 				09D57AEB2316EF6700DAF30F /* UserEditRequestService.swift */,
@@ -424,6 +427,7 @@
 			files = (
 				09D57AEC2316EF6700DAF30F /* UserEditRequestService.swift in Sources */,
 				0976561723102F77009E0B1F /* UserRequestsService.swift in Sources */,
+				09D57AF02317C52600DAF30F /* EditUserDataService.swift in Sources */,
 				09C43046230FE9A1007F2BF6 /* UserRequestViewController.swift in Sources */,
 				09EF1821230E97DE008C080F /* ChangeUserDataViewController.swift in Sources */,
 				096653E1230151F000D833E8 /* LoginService.swift in Sources */,

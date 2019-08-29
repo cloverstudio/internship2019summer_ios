@@ -13,8 +13,10 @@ class UserCell: UITableViewCell {
     @IBOutlet weak var korisnikImage: UIImageView!
     @IBOutlet weak var imeKorisnika: UILabel!
     @IBOutlet weak var emailKorisnika: UILabel!
-    var userId : Int?
     
+    var userId : Int?
+    var userName : String?
+    var userLastName : String?
     
     override func awakeFromNib() {
         super.awakeFromNib()

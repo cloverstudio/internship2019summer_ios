@@ -16,8 +16,6 @@ class UserRequestService {
     
     let token : [String:String] = ["token" : UserDefaults.standard.string(forKey: Keys.jasonWebToken) ?? ""]
     
-    
-    
     func fetchData(searchWord: String? = nil, completion: @escaping userRequestData) {
         let searchString = searchWord != nil ? "?findBy=" + searchWord! : ""
         guard let requestURL = URL(string: "https://intern2019dev.clover.studio/requests/myRequests" + searchString) else {

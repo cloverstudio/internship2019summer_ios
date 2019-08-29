@@ -66,9 +66,15 @@ extension UsersViewController: UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "korisnikCell") as! UserCell
         
         //cell.korisnikImage.image = korisnik.korisnikImage
-        cell.imeKorisnika.text = user["firstName"].string
+        let userName = user["firstName"].string
+        let lastName = user["lastName"].string
         cell.emailKorisnika.text = user["email"].string
         cell.userId = user["ID"].int
+        
+        if let firstName = userName, let lastName = lastName {
+            cell.imeKorisnika.text = "\(firstName) \(lastName)"
+        }
+        
 
         return cell
     }
