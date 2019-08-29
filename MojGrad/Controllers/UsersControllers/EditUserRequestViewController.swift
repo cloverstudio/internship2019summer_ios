@@ -1,83 +1,132 @@
 //
-//  AddNewFeedViewController.swift
+//  EditUserRequestViewController.swift
 //  MojGrad
 //
-//  Created by Ja on 19/08/2019.
+//  Created by Ja on 28/08/2019.
 //  Copyright © 2019 Ja. All rights reserved.
 //
+
 import UIKit
 import MapKit
-import CoreLocation
 
+class EditUserRequestViewController: UIViewController {
 
-class NewRequestViewController: UIViewController {
+    var requestId : Int?
+    var address : String?
+    var message: String?
+    var titleRequest : String?
+    var requestType : String?
     
-    var listOfItems : [String] = ["Kvar", "Prijedlog"]
+    let listOfItems = ["Sve", "Kvar", "Prijedlog"]
     
     let locationManager = CLLocationManager()
-    let regionInMeters : Double = 10000
+    let regionInMeters = 50000
     var previousLocation : CLLocation?
     
-    var newRequest = UserSendNewRequestService()
+    var editRequest = UserEditRequestService()
     
-    @IBOutlet weak var titleText: UITextView!
-    @IBOutlet weak var typeOfRequestTextField: UITextField!
-    
-    
-    @IBOutlet weak var messageTextView: UITextView!
+    @IBOutlet weak var titleOfRequest: UITextView!
+    @IBOutlet weak var typeOfRequest: UITextField!
+    @IBOutlet weak var messageOfRequest: UILabel!
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var placeLabel: UILabel!
-    
+    @IBOutlet weak var addressLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        fillRequest()
         createRequestPicker()
         createToolbar()
-        
-        titleText.addBottomBorderWithColor(color: #colorLiteral(red: 0.9058823529, green: 0.9058823529, blue: 0.9058823529, alpha: 1), height: 3.0)
-        messageTextView.addBottomBorderWithColor(color: #colorLiteral(red: 0.9058823529, green: 0.9058823529, blue: 0.9058823529, alpha: 1), height: 3.0)
+        showAddressOnMap()
         
         checkLocationServices()
     }
-    @IBAction func sendRequestButtonTapped(_ sender: UIButton) {
+    
+    @IBAction func sendRequestButtonClicked(_ sender: UIButton) {
         
-        guard let title = titleText.text else {return}
-        guard let address = placeLabel.text else {return}
-        guard let typeRequest = typeOfRequestTextField.text else {return}
-        guard let message = messageTextView.text else {return}
+        let title = titleOfRequest.text ?? ""
+        let address = addressLabel.text ?? ""
+        let typeRequest = typeOfRequest.text ?? ""
+        let message = messageOfRequest.text ?? ""
+        
+        let id = requestId
         
         getLongLat(address: address) { array in
-            
+             
             let latitude = array[0]
             let longitude = array[1]
             
             let param : [String : Any] = ["Title" : title, "Request_type" : typeRequest, "location_latitude" : latitude, "location_longitude" : longitude, "message" : message]
-            
-            self.newRequest.sendData(parameters: param) { jsonData in
+            print(param)
+            self.editRequest.sendData(parameters: param, requestID: id) { jsonData in
                 guard let _ = jsonData else {
                     self.showAlert(withTitle: "Error", withMessage: "Server down!")
                     return
-                } 
+                }
+                
                 let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
                     NotificationCenter.default.post(name: Notification.Name(NewUserController.CONSTANT_REFRESH_USERS), object: nil)
-//                    self.navigationController?.popViewController(animated: true)
-//                    self.performSegue(withIdentifier: "UserRequests", sender: nil)
                     let storyboard = UIStoryboard.init(name: "UserRequests", bundle: nil)
                     let destination = storyboard.instantiateViewController(withIdentifier: "UserRequests")
                     self.navigationController?.pushViewController(destination, animated: true)
                     
                 })
-                self.showAlert(withTitle: "Super", withMessage: "Zahtjev uspješno kreiran", okAction: ok)
+                self.showAlert(withTitle: "Super", withMessage: "Izmjena uspješno kreirana", okAction: ok)
             }
         }
-        UserDefaults.standard.set(true, forKey: Keys.requestSent)
-        
-
     }
-
+    
+    
+    func fillRequest() {
+        addressLabel.text = address
+        titleOfRequest.text = titleRequest
+        typeOfRequest.text = requestType
+        messageOfRequest.text = message
+    }
+    
+    func createRequestPicker() {
+        let requestPicker = UIPickerView()
+        requestPicker.delegate = self
+        typeOfRequest.inputView = requestPicker
+        requestPicker.backgroundColor = #colorLiteral(red: 0.9058823529, green: 0.9058823529, blue: 0.9058823529, alpha: 1)
+    }
+    
+    func createToolbar() {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        toolBar.tintColor = #colorLiteral(red: 0, green: 0.462745098, blue: 1, alpha: 1)
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(NewRequestViewController.dismissKeyboard))
+        
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        typeOfRequest.inputAccessoryView = toolBar
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func showAddressOnMap() {
+        let geoCoder = CLGeocoder()
+        guard let address = address else { return }
+        geoCoder.geocodeAddressString(address) { [weak self] (placemarks, error) in
+            if let placemark = placemarks?.first, let location = placemark.location {
+                
+                if var region = self?.mapView.region {
+                    region.center = location.coordinate
+                    region.span.longitudeDelta /= 500.0
+                    region.span.latitudeDelta /= 500.0
+                    self?.mapView.setRegion(region, animated: true)
+                }
+            }
+        }
+    }
+    
     typealias GetLatLong = ([Double]) -> Void
-
+    
     func getLongLat(address: String, completion: @escaping GetLatLong) {
         let geoCoder = CLGeocoder()
         var array = [Double]()
@@ -94,33 +143,6 @@ class NewRequestViewController: UIViewController {
         }
     }
     
-    func createRequestPicker() {
-        let requestPicker = UIPickerView()
-        requestPicker.delegate = self
-        
-        typeOfRequestTextField.inputView = requestPicker
-        
-        requestPicker.backgroundColor = #colorLiteral(red: 0.9058823529, green: 0.9058823529, blue: 0.9058823529, alpha: 1)
-    }
-    
-    func createToolbar() {
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        
-        toolBar.tintColor = #colorLiteral(red: 0, green: 0.462745098, blue: 1, alpha: 1)
-        
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(NewRequestViewController.dismissKeyboard))
-        
-        toolBar.setItems([doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        
-        typeOfRequestTextField.inputAccessoryView = toolBar
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
     func setUpLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -128,7 +150,7 @@ class NewRequestViewController: UIViewController {
     
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
-            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: CLLocationDistance(regionInMeters), longitudinalMeters: CLLocationDistance(regionInMeters))
             mapView.setRegion(region, animated: true)
         }
     }
@@ -141,6 +163,7 @@ class NewRequestViewController: UIViewController {
             showAlert(withTitle: "Info", withMessage: "Location service disabled.")
         }
     }
+    
     
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
@@ -173,7 +196,7 @@ class NewRequestViewController: UIViewController {
     }
 }
 
-extension NewRequestViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+extension EditUserRequestViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -184,7 +207,7 @@ extension NewRequestViewController: UIPickerViewDataSource, UIPickerViewDelegate
         return listOfItems[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        typeOfRequestTextField.text = listOfItems[row]
+        typeOfRequest.text = listOfItems[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
@@ -206,13 +229,13 @@ extension NewRequestViewController: UIPickerViewDataSource, UIPickerViewDelegate
     }
 }
 
-extension NewRequestViewController: CLLocationManagerDelegate {
+extension EditUserRequestViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthorization()
     }
 }
 
-extension NewRequestViewController: MKMapViewDelegate {
+extension EditUserRequestViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         let center = getCenterLocation(for: mapView)
@@ -241,9 +264,8 @@ extension NewRequestViewController: MKMapViewDelegate {
             let cityName = placemark.country ?? ""
             
             DispatchQueue.main.async {
-                self.placeLabel.text = "\(streetNumber) \(streetName), \(cityName)"
+                self.addressLabel.text = "\(streetNumber) \(streetName), \(cityName)"
             }
         }
     }
 }
-

@@ -40,6 +40,7 @@ class UserRequestViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.downloadRequests), name: Notification.Name(NewUserController.CONSTANT_REFRESH_USERS), object: nil)
         
     }
+
     @IBAction func newRequestButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard.init(name: "UserRequests", bundle: nil)
         let destination = storyboard.instantiateViewController(withIdentifier: "CreateUserRequest")
@@ -147,10 +148,25 @@ extension UserRequestViewController: UITableViewDelegate, UITableViewDataSource 
         cell.titleLabel.text = request["Title"].string
         cell.typeOfRequest.text = "Tip: \(requestType!)"
         cell.messageRequest.text = request["message"].string
+        cell.requestId = request["ID"].int
         let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
         cell.mapView.setRegion(region, animated: true)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? UserRequests else {
+            return
+        }
+        
+        let storyboard = UIStoryboard(name: "UserRequests", bundle: nil)
+        let destination = storyboard.instantiateViewController(withIdentifier: "EditUserRequest") as! EditUserRequestViewController
+        destination.requestId = cell.requestId
+        destination.address = cell.addressLabel.text
+        destination.titleRequest = cell.titleLabel.text
+        destination.message = cell.messageRequest.text
+        navigationController?.pushViewController(destination, animated: true)
     }
 }
 

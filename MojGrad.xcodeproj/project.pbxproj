@@ -35,6 +35,8 @@
 		09C8092722F03BE20003674B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8092622F03BE20003674B /* RealmManager.swift */; };
 		09D1B3F723087B0D00B4A308 /* APIUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1B3F623087B0D00B4A308 /* APIUsers.swift */; };
 		09D1B3FA2308884400B4A308 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1B3F92308884400B4A308 /* MainTabBarController.swift */; };
+		09D57AEA2316797E00DAF30F /* EditUserRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D57AE92316797E00DAF30F /* EditUserRequestViewController.swift */; };
+		09D57AEC2316EF6700DAF30F /* UserEditRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D57AEB2316EF6700DAF30F /* UserEditRequestService.swift */; };
 		09DE2944230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2943230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift */; };
 		09DE2946230B162300239AE5 /* NewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2945230B162200239AE5 /* NewRequestViewController.swift */; };
 		09DE2948230B1DA700239AE5 /* UITextView+SetBottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2947230B1DA700239AE5 /* UITextView+SetBottomBorder.swift */; };
@@ -78,6 +80,8 @@
 		09C8092622F03BE20003674B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		09D1B3F623087B0D00B4A308 /* APIUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUsers.swift; sourceTree = "<group>"; };
 		09D1B3F92308884400B4A308 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		09D57AE92316797E00DAF30F /* EditUserRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserRequestViewController.swift; sourceTree = "<group>"; };
+		09D57AEB2316EF6700DAF30F /* UserEditRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditRequestService.swift; sourceTree = "<group>"; };
 		09DE2943230ABA6500239AE5 /* NewsFeedNewRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedNewRequestViewController.swift; sourceTree = "<group>"; };
 		09DE2945230B162200239AE5 /* NewRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestViewController.swift; sourceTree = "<group>"; };
 		09DE2947230B1DA700239AE5 /* UITextView+SetBottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+SetBottomBorder.swift"; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 				09D1B3F623087B0D00B4A308 /* APIUsers.swift */,
 				094ED0FC230C9A9500B43274 /* UserSendNewRequestService.swift */,
 				0976561623102F77009E0B1F /* UserRequestsService.swift */,
+				09D57AEB2316EF6700DAF30F /* UserEditRequestService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				097656192312F519009E0B1F /* UserRequestNavigationController.swift */,
 				09C43045230FE9A1007F2BF6 /* UserRequestViewController.swift */,
 				09DE2945230B162200239AE5 /* NewRequestViewController.swift */,
+				09D57AE92316797E00DAF30F /* EditUserRequestViewController.swift */,
 			);
 			path = UsersControllers;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09D57AEC2316EF6700DAF30F /* UserEditRequestService.swift in Sources */,
 				0976561723102F77009E0B1F /* UserRequestsService.swift in Sources */,
 				09C43046230FE9A1007F2BF6 /* UserRequestViewController.swift in Sources */,
 				09EF1821230E97DE008C080F /* ChangeUserDataViewController.swift in Sources */,
@@ -443,6 +450,7 @@
 				09E78E8022EECD9B005F5390 /* AppDelegate.swift in Sources */,
 				09755D7C22F3375500D90957 /* Keys.swift in Sources */,
 				099D20D722FDC4B500E25894 /* MD5Coding.swift in Sources */,
+				09D57AEA2316797E00DAF30F /* EditUserRequestViewController.swift in Sources */,
 				096653E523017AA900D833E8 /* UIViewController+Alert.swift in Sources */,
 				0976561A2312F519009E0B1F /* UserRequestNavigationController.swift in Sources */,
 				09755D7A22F2C2F000D90957 /* UITextField+SetBottomBorder.swift in Sources */,

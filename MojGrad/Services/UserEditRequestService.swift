@@ -1,8 +1,8 @@
 //
-//  UserRequestsService.swift
+//  UserEditRequestService.swift
 //  MojGrad
 //
-//  Created by Ja on 23/08/2019.
+//  Created by Ja on 28/08/2019.
 //  Copyright © 2019 Ja. All rights reserved.
 //
 
@@ -10,28 +10,28 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class UserRequestService {
-    
-    typealias userRequestData = (JSON?) -> Void
+class UserEditRequestService {
+    typealias newRequest = (JSON?) -> Void
     
     let token : [String:String] = ["token" : UserDefaults.standard.string(forKey: Keys.jasonWebToken) ?? ""]
     
-    
-    
-    func fetchData(searchWord: String? = nil, completion: @escaping userRequestData) {
-        let searchString = searchWord != nil ? "?findBy=" + searchWord! : ""
-        guard let requestURL = URL(string: "https://intern2019dev.clover.studio/requests/myRequests" + searchString) else {
+    func sendData(parameters: [String : Any],requestID : Int? = nil, completion: @escaping newRequest) {
+        guard let id = requestID else {
+            return
+        }
+        
+        guard let newRequestURL = URL(string: "https://intern2019dev.clover.studio/requests/edit/\(id)") else {
             completion(nil)
             return
         }
-        Alamofire.request(requestURL, method: .get, parameters: nil, headers: token).responseJSON {
+        Alamofire.request(newRequestURL, method: .put, parameters: parameters, headers: token).responseJSON {
             response in
             if response.result.isSuccess {
                 let json = JSON(response.result.value as Any)
                 completion(json)
                 print(json)
             } else if response.result.isFailure {
-                print(response.result.error)
+                print(response.result.error as Any)
                 completion(nil)
             }
         }

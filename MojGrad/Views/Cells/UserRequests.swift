@@ -10,12 +10,13 @@ import MapKit
 
 class UserRequests: UITableViewCell {
     
+    var requestId : Int?
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var messageRequest: UITextView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var typeOfRequest: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
